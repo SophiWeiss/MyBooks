@@ -1,0 +1,7 @@
+- [ ] finish homepage
+- [ ] add ability to render books in `books` folder from .md source
+  - [ ] navigation between chapters
+  - [ ] save current chapter in local storage
+  - [ ] full screen (zen mode) support
+  - [ ] font size
+  - [ ] funny mode?
