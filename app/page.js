@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <p>My Books</p>
+      <h1 align={'center'}>My Books</h1>
       <a
         rel="license"
         href="https://creativecommons.org/licenses/by-nc-nd/4.0/"

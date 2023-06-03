@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'My Books',
-  description: 'The homepage for my books'
+  description: 'The homepage for my [bookID]'
 }
 
 export default function RootLayout({ children }) {
