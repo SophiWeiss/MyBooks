@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
-      <h1 align={'center'}>My Books</h1>
+      <h1>My Books</h1>
       <a
         rel="license"
         href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
@@ -17,7 +17,6 @@ export default function Home() {
           height={31}
         />
       </a>
-      <br />
       This work is licensed under a{' '}
       <a
         rel="license"
