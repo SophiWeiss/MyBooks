@@ -1,7 +1,12 @@
 - [ ] finish homepage
+  - [ ] static version
+  - [ ] ability to see all books and switch between them and fetch them
+  - [ ] change themes switch
+  - [ ] dots
 - [ ] add ability to render books in `books` folder from .md source
   - [ ] navigation between chapters
   - [ ] save current chapter in local storage
   - [ ] full screen (zen mode) support
   - [ ] font size
   - [ ] funny mode?
+- [ ] Ukraine page
