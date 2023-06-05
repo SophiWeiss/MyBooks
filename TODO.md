@@ -10,3 +10,5 @@
   - [ ] font size
   - [ ] funny mode?
 - [ ] Ukraine page
+- [ ] About me section
+- [ ] miniwiki for every book
