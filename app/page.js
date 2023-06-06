@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
+
 function Title() {
-  return <h1>My Books</h1>
+  return (
+    <header>
+      <h1>My Books</h1>
+    </header>
+  )
 }
 
 function Arrow({ right, left }) {
@@ -36,7 +41,7 @@ function Dots() {
 
 function Books() {
   return (
-    <section>
+    <main>
       <div>
         <Arrow right />
         <BookCard
@@ -51,7 +56,7 @@ function Books() {
         <Arrow left />
       </div>
       <Dots />
-    </section>
+    </main>
   )
 }
 
