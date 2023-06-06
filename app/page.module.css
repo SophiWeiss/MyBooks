@@ -1,0 +1,15 @@
+.Ukraine {
+    display: block;
+    width: 42px;
+    height: 28px;
+}
+
+.UkraineBlue {
+    background: #095bb6;
+    height: 50%;
+}
+
+.UkraineYellow {
+    background: #fdd522;
+    height: 50%;
+}

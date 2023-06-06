@@ -1,3 +1,4 @@
+import style from './page.module.css'
 import Image from 'next/image'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
@@ -98,9 +99,9 @@ function License() {
 
 function Ukraine() {
   return (
-    <a>
-      <div />
-      <div />
+    <a className={style.Ukraine}>
+      <div className={style.UkraineBlue} />
+      <div className={style.UkraineYellow} />
     </a>
   )
 }
