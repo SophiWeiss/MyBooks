@@ -2,6 +2,9 @@
     display: block;
     width: 60px;
     height: 40px;
+    position: fixed;
+    bottom: var(--body-margin);
+    right: var(--body-margin);
 }
 
 .UkraineBlue {
@@ -23,7 +26,10 @@
     color: #8771ed;
 }
 
-.modeSwitcher {
+.modeSwitch {
+    position: fixed;
+    top: var(--body-margin);
+    right: var(--body-margin);
     display: inline-block;
     width: 72px;
     height: 36px;
@@ -31,11 +37,30 @@
     border-radius: 23px;
 }
 
-.innerModeSwitcher {
+.innerModeSwitch {
     --margin: 4px;
     aspect-ratio: 1;
     margin: var(--margin);
     height: calc(100% - 2 * var(--margin));
     border-radius: 100%;
     background-color: white;
+}
+
+.license {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    gap: 12px;
+    bottom: var(--body-margin);
+    left: var(--body-margin);
+}
+
+.licenceText {
+    font-size: 12px;
+}
+
+.licenseImage {
+    position: relative;
+    height: 25px;
+    width: 70px;
 }

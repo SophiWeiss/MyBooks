@@ -65,37 +65,34 @@ function Books() {
 
 function ModeSwitch() {
   return (
-    <div className={style.modeSwitcher}>
-      <div className={style.innerModeSwitcher} />
+    <div className={style.modeSwitch}>
+      <div className={style.innerModeSwitch} />
     </div>
   )
 }
 
 function License() {
   return (
-    <>
+    <div className={style.license}>
       <a
         rel="license"
         href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        className={style.licenseImage}
       >
-        <Image
-          priority
-          alt="Creative Commons License"
-          style="border-width:0"
-          src="/by-nc-nd.svg"
-          width={88}
-          height={31}
-        />
+        <Image fill alt="Creative Commons License" src="/by-nc-nd.svg" />
       </a>
-      This work is licensed under a{' '}
-      <a
-        rel="license"
-        href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-      >
-        Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
-        International License.
-      </a>
-    </>
+      <div className={style.licenceText}>
+        This work is licensed under a
+        <br />
+        <a
+          rel="license"
+          href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        >
+          Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+          International License.
+        </a>
+      </div>
+    </div>
   )
 }
 
@@ -110,12 +107,12 @@ function Ukraine() {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Title />
       <Books />
       <ModeSwitch />
       <License />
       <Ukraine />
-    </main>
+    </>
   )
 }
