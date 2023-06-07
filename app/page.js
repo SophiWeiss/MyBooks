@@ -5,8 +5,8 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 function Title() {
   return (
     <header>
-      <h1 className={style.header2}>
-        <span className={style.header1}>My</span> Books
+      <h1 className={style.header}>
+        <span className={style.headerPurple}>My</span> Books
       </h1>
     </header>
   )
@@ -65,8 +65,8 @@ function Books() {
 
 function ModeSwitch() {
   return (
-    <div>
-      <div />
+    <div className={style.modeSwitcher}>
+      <div className={style.innerModeSwitcher} />
     </div>
   )
 }

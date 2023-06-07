@@ -1,7 +1,7 @@
 .Ukraine {
     display: block;
-    width: 42px;
-    height: 28px;
+    width: 60px;
+    height: 40px;
 }
 
 .UkraineBlue {
@@ -14,10 +14,28 @@
     height: 50%;
 }
 
-.header1 {
+.header {
+    font-size: 128px;
+    color: #363341;
+}
+
+.headerPurple {
     color: #8771ed;
 }
 
-.header2 {
-    color: #363341;
+.modeSwitcher {
+    display: inline-block;
+    width: 72px;
+    height: 36px;
+    background-color: #cebfff;
+    border-radius: 23px;
+}
+
+.innerModeSwitcher {
+    --margin: 4px;
+    aspect-ratio: 1;
+    margin: var(--margin);
+    height: calc(100% - 2 * var(--margin));
+    border-radius: 100%;
+    background-color: white;
 }
