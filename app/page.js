@@ -5,7 +5,9 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 function Title() {
   return (
     <header>
-      <h1>My Books</h1>
+      <h1 className={style.header2}>
+        <span className={style.header1}>My</span> Books
+      </h1>
     </header>
   )
 }
