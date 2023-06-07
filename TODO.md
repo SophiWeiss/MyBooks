@@ -1,5 +1,7 @@
 - [ ] finish homepage
   - [ ] static version
+    - [x] html layout
+    - [ ] css styling
   - [ ] ability to see all books and switch between them and fetch them
   - [ ] change themes switch
   - [ ] dots
