@@ -6,4 +6,8 @@
 
 :root {
     --body-margin: 25px;
+    --color-accent: #8771ed;
+    --color-accent-muted: #cebfff;
+    --color-accent-faint: #e7e0ff;
+    --color-accent-dark: #4a3492;
 }

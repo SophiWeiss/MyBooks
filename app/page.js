@@ -23,7 +23,7 @@ function Arrow({ right, left }) {
 
 function BookCard({ title, description, status }) {
   return (
-    <a>
+    <a className={style.bookCard}>
       <h2>{title}</h2>
       <p>{description}</p>
       <div data-status={status}>{status}</div>
