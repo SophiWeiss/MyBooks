@@ -35,6 +35,14 @@
     color: var(--color-accent);
 }
 
+.books {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
 .bookCard {
     --padding-x: 15px;
     --padding-y: 25px;

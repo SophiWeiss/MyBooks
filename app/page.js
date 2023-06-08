@@ -51,7 +51,7 @@ function Dots() {
 function Books() {
   return (
     <>
-      <div>
+      <div className={style.books}>
         <Arrow left />
         <BookCard
           title={'Book 1'}
