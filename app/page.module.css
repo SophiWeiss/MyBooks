@@ -10,13 +10,14 @@
     background-color: var(--color-accent-muted);
     border-radius: 23px;
     padding: 4px;
+    box-shadow: var(--shadow);
 }
 
 .innerModeSwitch {
     aspect-ratio: 1;
     height: 100%;
     border-radius: 100%;
-    background: white;
+    background: var(--color-background);
 }
 
 .main {
@@ -63,7 +64,7 @@
     background: var(--color-accent-faint);
     border: 3px solid var(--color-accent-muted);
     border-radius: 20px;
-    box-shadow: 4px 4px 25px var(--color-accent-faint);
+    box-shadow: var(--shadow);
 }
 
 .bookTitle {
@@ -89,14 +90,13 @@
 }
 
 .bookStatusIndicator {
-    background: black;
     width: 6px;
     height: 6px;
     border-radius: 3px;
 }
 
 .bookStatusIndicator[data-status="Done"] {
-    background: #94e79d;
+    background: var(--color-green);
 }
 
 .dots {
@@ -158,3 +158,20 @@
     height: 50%;
 }
 
+@media (prefers-color-scheme: dark) {
+    .bookTitle {
+        color: var(--color-accent);
+    }
+
+    .bookDescription {
+        color: var(--color-text-muted);
+    }
+
+    .bookStatusText, .licenceText a {
+       color: var(--color-accent-dark);
+    }
+
+    .modeSwitch {
+        background: var(--color-accent-dark);
+    }
+}
