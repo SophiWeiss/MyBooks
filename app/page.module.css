@@ -29,7 +29,7 @@
 }
 
 .title {
-    font-size: 96px;
+    font-size: 80px;
     text-align: center;
 }
 
@@ -58,9 +58,9 @@
     position: relative;
     padding: var(--padding-x) var(--padding-y);
     display: inline-block;
-    min-width: 300px;
-    max-width: 450px;
-    min-height: 225px;
+    min-width: 250px;
+    max-width: 400px;
+    min-height: 200px;
     background: var(--color-accent-faint);
     border: 3px solid var(--color-accent-muted);
     border-radius: 20px;
@@ -69,18 +69,18 @@
 
 .bookTitle {
     color: var(--color-accent-dark);
-    font-size: 48px;
+    font-size: 32px;
 }
 
 .bookDescription {
     color: var(--color-accent);
-    font-size: 18px;
 }
 
 .bookStatus {
     display: flex;
     align-items: center;
     gap: 5px;
+    font-size: 12px;
     position: absolute;
     top: var(--padding-x);
     right: var(--padding-y);
@@ -93,9 +93,9 @@
 
 .bookStatusIndicator {
     background: black;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
 }
 
 .bookStatusIndicator[data-status="Done"] {
@@ -105,13 +105,14 @@
 .dots {
     display: flex;
     gap: 5px;
+    padding-bottom: 70px;
 }
 
 .dot {
     background: var(--color-accent-muted);
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
 }
 
 .dot[data-selected=true] {
