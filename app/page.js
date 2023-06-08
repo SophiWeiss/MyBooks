@@ -117,7 +117,7 @@ export default function Home() {
       <header className={style.header}>
         <ModeSwitch />
       </header>
-      <main>
+      <main className={style.main}>
         <Title />
         <Books />
       </main>
