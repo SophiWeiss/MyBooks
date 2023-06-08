@@ -7,11 +7,9 @@ const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
 function Title() {
   return (
-    <header>
-      <h1 className={style.header}>
-        <span className={style.headerPurple}>My</span> Books
-      </h1>
-    </header>
+    <h1 className={style.title}>
+      <a>My</a> Books
+    </h1>
   )
 }
 
@@ -52,7 +50,7 @@ function Dots() {
 
 function Books() {
   return (
-    <main>
+    <>
       <div>
         <Arrow left />
         <BookCard
@@ -67,7 +65,7 @@ function Books() {
         <Arrow right />
       </div>
       <Dots />
-    </main>
+    </>
   )
 }
 
@@ -116,11 +114,17 @@ function Ukraine() {
 export default function Home() {
   return (
     <>
-      <Title />
-      <Books />
-      <ModeSwitch />
-      <License />
-      <Ukraine />
+      <header className={style.header}>
+        <ModeSwitch />
+      </header>
+      <main>
+        <Title />
+        <Books />
+      </main>
+      <footer className={style.footer}>
+        <License />
+        <Ukraine />
+      </footer>
     </>
   )
 }

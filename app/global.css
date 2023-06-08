@@ -6,10 +6,11 @@
 
 body {
     color: var(--color-text-normal);
+    padding: 25px;
+    height: 100vh;
 }
 
 :root {
-    --body-margin: 25px;
     --color-accent: #8771ed;
     --color-accent-muted: #cebfff;
     --color-accent-faint: #e7e0ff;
@@ -20,4 +21,5 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--color-accent);
 }

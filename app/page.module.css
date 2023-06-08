@@ -1,72 +1,36 @@
-.Ukraine {
-    display: block;
-    width: 60px;
-    height: 40px;
-    position: fixed;
-    bottom: var(--body-margin);
-    right: var(--body-margin);
-}
-
-.UkraineBlue {
-    background: #095bb6;
-    height: 50%;
-}
-
-.UkraineYellow {
-    background: #fdd522;
-    height: 50%;
-}
-
 .header {
-    font-size: 96px;
-}
-
-.headerPurple {
-    color: var(--color-accent);
+    display: flex;
+    justify-content: flex-end;
 }
 
 .modeSwitch {
-    position: fixed;
-    top: var(--body-margin);
-    right: var(--body-margin);
     display: inline-block;
     width: 60px;
     height: 30px;
     background-color: var(--color-accent-muted);
     border-radius: 23px;
+    padding: 4px;
 }
 
 .innerModeSwitch {
-    --margin: 4px;
     aspect-ratio: 1;
-    margin: var(--margin);
-    height: calc(100% - 2 * var(--margin));
+    height: 100%;
     border-radius: 100%;
     background: white;
 }
 
-.license {
+.main {
     display: flex;
-    align-items: center;
-    position: fixed;
-    gap: 12px;
-    bottom: var(--body-margin);
-    left: var(--body-margin);
+    flex-direction: column;
+    align-content: center;
 }
 
-.licenceText {
-    font-size: 12px;
-    color: var(--color-text-muted);
+.title {
+    font-size: 96px;
 }
 
-.licenceText a {
+.titlePurple {
     color: var(--color-accent);
-}
-
-.licenseImage {
-    position: relative;
-    height: 25px;
-    width: 70px;
 }
 
 .bookCard {
@@ -138,3 +102,42 @@
     color: var(--color-accent-muted);
     scale: 2;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.license {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.licenceText {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.licenseImage {
+    position: relative;
+    height: 25px;
+    width: 70px;
+}
+
+.Ukraine {
+    display: block;
+    width: 60px;
+    height: 40px;
+}
+
+.UkraineBlue {
+    background: #095bb6;
+    height: 50%;
+}
+
+.UkraineYellow {
+    background: #fdd522;
+    height: 50%;
+}
+
