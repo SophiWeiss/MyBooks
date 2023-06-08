@@ -117,3 +117,24 @@
 .bookStatusIndicator[data-status="Done"] {
     background: #94e79d;
 }
+
+.dots {
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    background: var(--color-accent-muted);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.dot[data-selected=true] {
+    background: var(--color-accent-dark);
+}
+
+.arrow {
+    color: var(--color-accent-muted);
+    scale: 2;
+}

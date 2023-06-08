@@ -18,8 +18,8 @@ function Title() {
 function Arrow({ right, left }) {
   return (
     <>
-      {right && <BsChevronRight />}
-      {left && <BsChevronLeft />}
+      {right && <BsChevronRight className={style.arrow} />}
+      {left && <BsChevronLeft className={style.arrow} />}
     </>
   )
 }
@@ -41,11 +41,11 @@ function BookCard({ title, description, status }) {
 
 function Dots() {
   return (
-    <div>
-      <div />
-      <div />
-      <div />
-      <div />
+    <div className={style.dots}>
+      <div className={style.dot} data-selected={true} />
+      <div className={style.dot} />
+      <div className={style.dot} />
+      <div className={style.dot} />
     </div>
   )
 }
