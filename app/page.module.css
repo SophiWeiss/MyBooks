@@ -22,13 +22,15 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10%;
+    max-height: 500px;
+    gap: 20px;
 }
 
 .title {
     font-size: 96px;
+    text-align: center;
 }
 
 .titlePurple {
@@ -39,8 +41,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 20px;
     width: 100%;
+    max-width: 700px;
+    gap: 20px;
+}
+
+.arrow {
+    color: var(--color-accent-muted);
+    scale: 2;
+    flex-shrink: 0;
 }
 
 .bookCard {
@@ -49,8 +58,9 @@
     position: relative;
     padding: var(--padding-x) var(--padding-y);
     display: inline-block;
-    width: 450px;
-    height: 225px;
+    min-width: 300px;
+    max-width: 450px;
+    min-height: 225px;
     background: var(--color-accent-faint);
     border: 3px solid var(--color-accent-muted);
     border-radius: 20px;
@@ -108,14 +118,11 @@
     background: var(--color-accent-dark);
 }
 
-.arrow {
-    color: var(--color-accent-muted);
-    scale: 2;
-}
-
 .footer {
     display: flex;
     justify-content: space-between;
+    gap: 25px;
+    align-items: center;
 }
 
 .license {
@@ -133,12 +140,14 @@
     position: relative;
     height: 25px;
     width: 70px;
+    flex-shrink: 0;
 }
 
 .Ukraine {
     display: block;
     width: 60px;
     height: 40px;
+    flex-shrink: 0;
 }
 
 .UkraineBlue {
