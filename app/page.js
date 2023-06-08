@@ -25,13 +25,13 @@ function Arrow({ right, left }) {
 function BookCard({ title, description, status }) {
   return (
     <a className={style.bookCard}>
-      <h2 className={style.bookTitle}>{title}</h2>
+      <h3 className={style.bookTitle}>{title}</h3>
       <p className={style.bookDescription}>{description}</p>
       <div className={style.bookStatus}>
         <div className={style.bookStatusIndicator} data-status={status} />
-        <div className={`${style.bookStatusText} ${nunito.className}`}>
+        <small className={[style.bookStatusText, nunito.className].join(' ')}>
           {status}
-        </div>
+        </small>
       </div>
     </a>
   )
@@ -57,8 +57,8 @@ function Books() {
           title={'Book 1'}
           description={
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do' +
-            ' eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ' +
-            'enim ad minim veniam, quis nostrud exercitation ullamco'
+            ' eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut' +
+            ' enim ad minim veniam, quis nostrud exercitation ullamco'
           }
           status={'Done'}
         />
@@ -87,7 +87,7 @@ function License() {
       >
         <Image fill alt="Creative Commons License" src="/by-nc-nd.svg" />
       </a>
-      <div className={style.licenceText}>
+      <small className={style.licenceText}>
         This work is licensed under a
         <br />
         <a
@@ -97,7 +97,7 @@ function License() {
           Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
           International License.
         </a>
-      </div>
+      </small>
     </div>
   )
 }

@@ -15,8 +15,25 @@ body {
     gap: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
 main {
     flex: 1;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+small {
+    font-size: 12px;
 }
 
 :root {
@@ -26,9 +43,4 @@ main {
     --color-accent-dark: #4a3492;
     --color-text-normal: #363341;
     --color-text-muted: #7c7798;
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-accent);
 }
