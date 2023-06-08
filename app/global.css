@@ -7,7 +7,15 @@
 body {
     color: var(--color-text-normal);
     padding: 25px;
-    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+main {
+    flex: 1;
 }
 
 :root {
