@@ -1,6 +1,9 @@
 import style from './page.module.css'
 import Image from 'next/image'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
+import { Nunito } from 'next/font/google'
+
+const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
 function Title() {
   return (
@@ -24,9 +27,14 @@ function Arrow({ right, left }) {
 function BookCard({ title, description, status }) {
   return (
     <a className={style.bookCard}>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <div data-status={status}>{status}</div>
+      <h2 className={style.bookTitle}>{title}</h2>
+      <p className={style.bookDescription}>{description}</p>
+      <div className={style.bookStatus}>
+        <div className={style.bookStatusIndicator} data-status={status} />
+        <div className={`${style.bookStatusText} ${nunito.className}`}>
+          {status}
+        </div>
+      </div>
     </a>
   )
 }
@@ -46,7 +54,7 @@ function Books() {
   return (
     <main>
       <div>
-        <Arrow right />
+        <Arrow left />
         <BookCard
           title={'Book 1'}
           description={
@@ -56,7 +64,7 @@ function Books() {
           }
           status={'Done'}
         />
-        <Arrow left />
+        <Arrow right />
       </div>
       <Dots />
     </main>

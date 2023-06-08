@@ -66,8 +66,50 @@
 }
 
 .bookCard {
+    --padding-x: 15px;
+    --padding-y: 25px;
+    position: relative;
+    padding: var(--padding-x) var(--padding-y);
     display: inline-block;
     width: 450px;
     height: 225px;
     background: var(--color-accent-faint);
+    border: 3px solid var(--color-accent-muted);
+    border-radius: 20px;
+    box-shadow: 4px 4px 25px var(--color-accent-faint);
+}
+
+.bookTitle {
+    color: var(--color-accent-dark);
+    font-size: 48px;
+}
+
+.bookDescription {
+    color: var(--color-accent);
+    font-size: 18px;
+}
+
+.bookStatus {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: var(--padding-x);
+    right: var(--padding-y);
+}
+
+.bookStatusText {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.bookStatusIndicator {
+    background: black;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.bookStatusIndicator[data-status="Done"] {
+    background: #94e79d;
 }
