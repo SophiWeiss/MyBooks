@@ -19,7 +19,6 @@
 
 .header {
     font-size: 96px;
-    color: #363341;
 }
 
 .headerPurple {
@@ -57,6 +56,11 @@
 
 .licenceText {
     font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.licenceText a {
+    color: var(--color-accent);
 }
 
 .licenseImage {
