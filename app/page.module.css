@@ -105,7 +105,8 @@
 .dots {
     display: flex;
     gap: 5px;
-    padding-bottom: 70px;
+    flex: 1;
+    max-height: 70px;
 }
 
 .dot {
