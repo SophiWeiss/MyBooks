@@ -17,6 +17,11 @@
     height: 100%;
     border-radius: 100%;
     background: white;
+    transition: transform 0.3s ease;
+}
+
+.modeSwitch.active .innerCircleModeSwitch {
+    transform: translateX(100%);
 }
 
 .main {
