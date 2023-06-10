@@ -1,6 +1,6 @@
 import './global.css'
 import { Lora } from 'next/font/google'
-import { Providers } from '@/providers'
+import { Providers } from './providers'
 
 const lora = Lora({ subsets: ['cyrillic', 'latin'] })
 

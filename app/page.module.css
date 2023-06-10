@@ -3,11 +3,11 @@
     justify-content: flex-end;
 }
 
-.modeSwitch {
-    display: inline-block;
+.modeSwitch, .modeSwitchUnmounted {
+    display: flex;
     width: 60px;
     height: 30px;
-    background-color: var(--color-accent-muted);
+    background: var(--color-accent-muted);
     border-radius: 23px;
     padding: 4px;
     box-shadow: var(--shadow);
@@ -17,16 +17,19 @@
     background: var(--color-accent-dark);
 }
 
+.modeSwitchUnmounted {
+    background: var(--color-accent-faint);
+}
+
 .innerModeSwitch {
     aspect-ratio: 1;
     height: 100%;
     border-radius: 100%;
     background: var(--color-background);
-    transition: transform 0.3s ease;
 }
 
-.modeSwitch.active .innerCircleModeSwitch {
-    transform: translateX(100%);
+[data-theme='dark'] .modeSwitchUnmounted {
+    background: var(--color-accent-muted);
 }
 
 .main {
