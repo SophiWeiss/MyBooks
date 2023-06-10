@@ -11,10 +11,12 @@
     border-radius: 23px;
     padding: 4px;
     box-shadow: var(--shadow);
+    justify-content: flex-start;
 }
 
 [data-theme='dark'] .modeSwitch {
     background: var(--color-accent-dark);
+    justify-content: flex-end;
 }
 
 .modeSwitchUnmounted {
