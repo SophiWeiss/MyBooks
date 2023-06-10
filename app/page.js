@@ -2,6 +2,7 @@ import style from './page.module.css'
 import Image from 'next/image'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import { Nunito } from 'next/font/google'
+import ModeSwitch from './theme'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
@@ -66,14 +67,6 @@ function Books() {
       </div>
       <Dots />
     </>
-  )
-}
-
-function ModeSwitch() {
-  return (
-    <div className={style.modeSwitch}>
-      <div className={style.innerModeSwitch} />
-    </div>
   )
 }
 
