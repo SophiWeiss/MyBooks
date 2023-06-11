@@ -61,9 +61,46 @@
 }
 
 .arrow {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.arrow svg {
     color: var(--color-accent-muted);
-    scale: 2;
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
+    transition: .3s;
+}
+
+[data-theme='dark'] .arrow svg {
+    color: var(--color-accent-dark);
+}
+
+.arrow[data-right=true] svg {
+    translate: 2px;
+}
+
+.arrow[data-left=true] svg {
+    translate: -2px;
+}
+
+.arrow:hover {
+    background: var(--color-accent-muted);
+    box-shadow: var(--shadow);
+}
+
+[data-theme='dark'] .arrow:hover {
+    background: var(--color-accent-dark);
+}
+
+.arrow:hover svg {
+    color: var(--color-background);
 }
 
 .bookCard {

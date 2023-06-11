@@ -3,6 +3,9 @@
     - [x] html layout
     - [x] css styling
     - [ ] css animations
+      - [ ] arrows
+      - [ ] links
+      - [ ] ukraine and book card
   - [ ] ability to see all books and switch between them and fetch them
   - [ ] change themes switch
   - [ ] dots

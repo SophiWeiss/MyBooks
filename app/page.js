@@ -16,10 +16,10 @@ function Title() {
 
 function Arrow({ right, left }) {
   return (
-    <>
-      {right && <BsChevronRight className={style.arrow} />}
-      {left && <BsChevronLeft className={style.arrow} />}
-    </>
+    <div data-right={right} data-left={left} className={style.arrow}>
+      {right && <BsChevronRight />}
+      {left && <BsChevronLeft />}
+    </div>
   )
 }
 
