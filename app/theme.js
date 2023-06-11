@@ -13,12 +13,12 @@ export default function ModeSwitch() {
   return (
     <>
       {mounted ? (
-        <div
+        <button
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           className={style.modeSwitch}
         >
           <motion.div layout className={style.innerModeSwitch} />
-        </div>
+        </button>
       ) : (
         <div className={style.modeSwitchUnmounted} />
       )}
