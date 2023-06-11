@@ -21,6 +21,10 @@ a {
     color: var(--color-accent);
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 main {
     flex: 1;
 }

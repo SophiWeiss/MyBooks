@@ -1,13 +1,13 @@
 - [ ] finish homepage
-  - [ ] static version
+  - [x] static version
     - [x] html layout
     - [x] css styling
-    - [ ] css animations
-      - [ ] arrows
-      - [ ] links
-      - [ ] ukraine and book card
+    - [x] css animations
+      - [x] arrows
+      - [x] links
+      - [x] ukraine and book card
   - [ ] ability to see all books and switch between them and fetch them
-  - [ ] change themes switch
+  - [x] change themes switch
   - [ ] dots
 - [ ] add ability to render books in `books` folder from .md source
   - [ ] navigation between chapters
@@ -18,3 +18,4 @@
 - [ ] Ukraine page
 - [ ] About me section
 - [ ] miniwiki for every book
+- [ ] all books page

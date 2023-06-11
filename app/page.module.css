@@ -67,7 +67,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    transition: .3s;
+    transition: background .3s, box-shadow .3s;
 }
 
 .arrow svg {
@@ -75,7 +75,7 @@
     width: 30px;
     height: 30px;
     flex-shrink: 0;
-    transition: .3s;
+    transition: color .3s;
 }
 
 [data-theme='dark'] .arrow svg {
@@ -116,6 +116,13 @@
     border: 3px solid var(--color-accent-muted);
     border-radius: 20px;
     box-shadow: var(--shadow);
+    transition: scale .3s, translate .3s;
+}
+
+.bookCard:hover {
+    text-decoration: none;
+    scale: 1.005;
+    translate: 0 -4px;
 }
 
 .bookTitle {
@@ -213,6 +220,12 @@
     width: 60px;
     height: 40px;
     flex-shrink: 0;
+    transition: scale .3s, translate .3s;
+}
+
+.Ukraine:hover {
+    scale: 1.01;
+    translate: 0 -3px;
 }
 
 .UkraineBlue {
