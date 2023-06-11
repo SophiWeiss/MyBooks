@@ -52,7 +52,11 @@ function Dots({ count, selectedIndex }) {
     <div key={i} className={style.dot} data-selected={i === selectedIndex} />
   ))
 
-  return <div className={style.dots}>{dots}</div>
+  return (
+    <Link href={'/books'} className={style.dots}>
+      {dots}
+    </Link>
+  )
 }
 
 export default function Books() {
