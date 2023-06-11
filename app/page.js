@@ -2,11 +2,12 @@ import style from './page.module.css'
 import Image from 'next/image'
 import ModeSwitch from './theme'
 import Books from './books'
+import Link from 'next/link'
 
 function Title() {
   return (
     <h1 className={style.title}>
-      <a>My</a> Books
+      <Link href={'/about-me'}>My</Link> Books
     </h1>
   )
 }
@@ -38,10 +39,10 @@ function License() {
 
 function Ukraine() {
   return (
-    <a className={style.Ukraine}>
+    <Link href={'/ukraine'} className={style.Ukraine}>
       <div className={style.UkraineBlue} />
       <div className={style.UkraineYellow} />
-    </a>
+    </Link>
   )
 }
 

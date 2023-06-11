@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { wrap } from 'framer-motion'
+import Link from 'next/link'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
@@ -97,37 +98,43 @@ export default function Books() {
     <>
       <div className={style.books}>
         <Arrow left onClick={() => paginate(-1)} />
-        <AnimatePresence initial={false} custom={direction} mode={'popLayout'}>
-          <motion.a
-            className={style.bookCard}
-            key={book}
+        <Link href={`/books/${books[bookIndex].id}`}>
+          <AnimatePresence
+            initial={false}
             custom={direction}
-            variants={variants}
-            initial={'enter'}
-            animate={'center'}
-            exit={'exit'}
-            transition={{
-              x: { type: 'spring', stiffness: 300, damping: 30 },
-              opacity: { duration: 0.3 }
-            }}
+            mode={'popLayout'}
           >
-            <h3 className={style.bookTitle}>{books[bookIndex].title}</h3>
-            <p className={style.bookDescription}>
-              {books[bookIndex].description}
-            </p>
-            <div className={style.bookStatus}>
-              <div
-                className={style.bookStatusIndicator}
-                data-status={books[bookIndex].status}
-              />
-              <small
-                className={[style.bookStatusText, nunito.className].join(' ')}
-              >
-                {books[bookIndex].status}
-              </small>
-            </div>
-          </motion.a>
-        </AnimatePresence>
+            <motion.div
+              className={style.bookCard}
+              key={book}
+              custom={direction}
+              variants={variants}
+              initial={'enter'}
+              animate={'center'}
+              exit={'exit'}
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 30 },
+                opacity: { duration: 0.3 }
+              }}
+            >
+              <h3 className={style.bookTitle}>{books[bookIndex].title}</h3>
+              <p className={style.bookDescription}>
+                {books[bookIndex].description}
+              </p>
+              <div className={style.bookStatus}>
+                <div
+                  className={style.bookStatusIndicator}
+                  data-status={books[bookIndex].status}
+                />
+                <small
+                  className={[style.bookStatusText, nunito.className].join(' ')}
+                >
+                  {books[bookIndex].status}
+                </small>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </Link>
         <Arrow right onClick={() => paginate(1)} />
       </div>
       <Dots count={books.length} selectedIndex={bookIndex} />
