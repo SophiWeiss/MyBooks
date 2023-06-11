@@ -69,7 +69,7 @@
     align-items: center;
     border-radius: 25px;
     border: 3px solid transparent;
-    transition: background .3s, box-shadow .3s, border-color .3s;
+    transition: .3s, translate .15s;
     flex-shrink: 0;
 }
 
@@ -98,6 +98,10 @@
     box-shadow: var(--shadow);
 }
 
+.arrow:active {
+    translate: 0 4px;
+}
+
 .arrow:hover svg {
     color: var(--color-accent);
 }
@@ -116,12 +120,18 @@
     border-radius: 20px;
     box-shadow: var(--shadow);
     transition: scale .3s, translate .3s;
+    user-select: none;
 }
 
 .bookCard:hover {
     text-decoration: none;
     scale: 1.005;
     translate: 0 -4px;
+}
+
+.bookCard:active {
+    translate: 0 4px;
+    transition: .15s;
 }
 
 .bookTitle {
@@ -174,13 +184,17 @@
     padding: 10px;
     border-radius: 30px;
     border: 3px solid transparent;
-    transition: background .3s, box-shadow .3s, border-color .3s;
+    transition: .3s, translate .15s;
 }
 
 .dots:hover {
     background: var(--color-accent-faint);
     box-shadow: var(--shadow);
     border: 3px solid var(--color-accent-muted);
+}
+
+.dots:active {
+    translate: 0 4px;
 }
 
 .dot {
@@ -238,6 +252,11 @@
 .Ukraine:hover {
     scale: 1.01;
     translate: 0 -3px;
+}
+
+.Ukraine:active {
+    translate: 0 3px;
+    transition: translate .15s;
 }
 
 .UkraineBlue {

@@ -1,72 +1,13 @@
 import style from './page.module.css'
 import Image from 'next/image'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-import { Nunito } from 'next/font/google'
 import ModeSwitch from './theme'
-
-const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
+import Books from './books'
 
 function Title() {
   return (
     <h1 className={style.title}>
       <a>My</a> Books
     </h1>
-  )
-}
-
-function Arrow({ right, left }) {
-  return (
-    <div data-right={right} data-left={left} className={style.arrow}>
-      {right && <BsChevronRight />}
-      {left && <BsChevronLeft />}
-    </div>
-  )
-}
-
-function BookCard({ title, description, status }) {
-  return (
-    <a className={style.bookCard}>
-      <h3 className={style.bookTitle}>{title}</h3>
-      <p className={style.bookDescription}>{description}</p>
-      <div className={style.bookStatus}>
-        <div className={style.bookStatusIndicator} data-status={status} />
-        <small className={[style.bookStatusText, nunito.className].join(' ')}>
-          {status}
-        </small>
-      </div>
-    </a>
-  )
-}
-
-function Dots() {
-  return (
-    <div className={style.dots}>
-      <div className={style.dot} data-selected={true} />
-      <div className={style.dot} />
-      <div className={style.dot} />
-      <div className={style.dot} />
-    </div>
-  )
-}
-
-function Books() {
-  return (
-    <>
-      <div className={style.books}>
-        <Arrow left />
-        <BookCard
-          title={'Book 1'}
-          description={
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do' +
-            ' eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut' +
-            ' enim ad minim veniam, quis nostrud exercitation ullamco'
-          }
-          status={'Done'}
-        />
-        <Arrow right />
-      </div>
-      <Dots />
-    </>
   )
 }
 
