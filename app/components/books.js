@@ -64,16 +64,16 @@ export default function Books() {
   const books = [
     {
       id: 1,
-      title: 'Book 1',
+      title: 'Одно и тоже',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
-        'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ' +
-        'ad minim veniam, quis nostrud exercitation ullamco',
+        'Среда 7 утра. Обычный день для жителей города, которые уже полтора века не живут правдой реальности.' +
+        'Как далеко может завести власть боязнь перемен? Как живут маги в мире после окончания Великой войны?' +
+        'Насколько сильно боитесь перемен **вы**?',
       status: 'Done'
     },
     {
       id: 2,
-      title: 'Book 2',
+      title: 'Колючие кусты Розы',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
         'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ' +
@@ -82,7 +82,7 @@ export default function Books() {
     },
     {
       id: 3,
-      title: 'Book 3',
+      title: 'Смертельный квест',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
         'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ' +
