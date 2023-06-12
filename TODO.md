@@ -6,9 +6,10 @@
       - [x] arrows
       - [x] links
       - [x] ukraine and book card
-  - [ ] ability to see all books and switch between them and fetch them
+  - [x] ability to see all books and switch between them 
+    - [ ] fetch books
   - [x] change themes switch
-  - [ ] dots
+  - [x] dots
 - [ ] add ability to render books in `books` folder from .md source
   - [ ] navigation between chapters
   - [ ] save current chapter in local storage
@@ -19,3 +20,4 @@
 - [ ] About me section
 - [ ] miniwiki for every book
 - [ ] all books page
+- [ ] mobile

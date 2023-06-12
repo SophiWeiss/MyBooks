@@ -3,7 +3,7 @@
     justify-content: flex-end;
 }
 
-.modeSwitch, .modeSwitchUnmounted {
+.themeSwitch, .themeSwitchUnmounted {
     display: flex;
     width: 60px;
     height: 30px;
@@ -14,23 +14,23 @@
     justify-content: flex-start;
 }
 
-[data-theme='dark'] .modeSwitch {
+[data-theme='dark'] .themeSwitch {
     background: var(--color-accent-dark);
     justify-content: flex-end;
 }
 
-.modeSwitchUnmounted {
+.themeSwitchUnmounted {
     background: var(--color-accent-faint);
 }
 
-.innerModeSwitch {
+.themeModeSwitch {
     aspect-ratio: 1;
     height: 100%;
     border-radius: 100%;
     background: var(--color-background);
 }
 
-[data-theme='dark'] .modeSwitchUnmounted {
+[data-theme='dark'] .themeSwitchUnmounted {
     background: var(--color-accent-muted);
 }
 

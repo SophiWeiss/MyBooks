@@ -1,12 +1,11 @@
 'use client'
 
-import style from '@/page.module.css'
+import style from './page.module.css'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import { Nunito } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { wrap } from 'framer-motion'
+import { motion, wrap } from 'framer-motion'
 import Link from 'next/link'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })

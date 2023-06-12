@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import style from './page.module.css'
 import { motion } from 'framer-motion'
 
-export default function ModeSwitch() {
+export default function ThemeSwitch() {
   const { setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
@@ -15,12 +15,12 @@ export default function ModeSwitch() {
       {mounted ? (
         <button
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-          className={style.modeSwitch}
+          className={style.themeSwitch}
         >
-          <motion.div layout className={style.innerModeSwitch} />
+          <motion.div layout className={style.themeModeSwitch} />
         </button>
       ) : (
-        <div className={style.modeSwitchUnmounted} />
+        <div className={style.themeSwitchUnmounted} />
       )}
     </>
   )

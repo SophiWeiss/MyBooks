@@ -1,6 +1,6 @@
 import style from './page.module.css'
 import Image from 'next/image'
-import ModeSwitch from './theme'
+import ThemeSwitch from './theme'
 import Books from './books'
 import Link from 'next/link'
 
@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       <header className={style.header}>
-        <ModeSwitch />
+        <ThemeSwitch />
       </header>
       <main className={style.main}>
         <Title />
