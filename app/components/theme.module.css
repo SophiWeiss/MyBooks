@@ -1,0 +1,30 @@
+.themeSwitch, .themeSwitchUnmounted {
+    display: flex;
+    width: 60px;
+    height: 30px;
+    background: var(--color-accent-muted);
+    border-radius: 23px;
+    padding: 4px;
+    box-shadow: var(--shadow);
+    justify-content: flex-start;
+}
+
+[data-theme='dark'] .themeSwitch {
+    background: var(--color-accent-dark);
+    justify-content: flex-end;
+}
+
+.themeSwitchUnmounted {
+    background: var(--color-accent-faint);
+}
+
+.themeModeSwitch {
+    aspect-ratio: 1;
+    height: 100%;
+    border-radius: 100%;
+    background: var(--color-background);
+}
+
+[data-theme='dark'] .themeSwitchUnmounted {
+    background: var(--color-accent-muted);
+}

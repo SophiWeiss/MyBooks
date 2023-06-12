@@ -1,6 +1,6 @@
 'use client'
 
-import style from './page.module.css'
+import style from './books.module.css'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import { Nunito } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'

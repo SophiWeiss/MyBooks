@@ -1,7 +1,7 @@
 import style from './page.module.css'
 import Image from 'next/image'
-import ThemeSwitch from './theme'
-import Books from './books'
+import ThemeSwitch from './components/theme'
+import Books from './components/books'
 import Link from 'next/link'
 
 function Title() {
