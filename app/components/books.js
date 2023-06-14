@@ -73,9 +73,7 @@ export default function Books() {
       id: 2,
       title: 'Колючие кусты Розы',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
-        'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ' +
-        'ad minim veniam, quis nostrud exercitation ullamco',
+        'Мир, где особенную магию нужно заслужить и пережить испытания на разных краях света. Мир, где все жители планеты, кроме твоего родного города, пытаются тебя убить. Каковы шансы у девушки с психологическими проблемами выжить?',
       status: 'Done'
     },
     {
