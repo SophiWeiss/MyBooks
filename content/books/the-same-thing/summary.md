@@ -1,8 +1,8 @@
 ---
-name: "Одно и тоже"
-start_date: ""
-publish_date: ""
-status: "In Progress"
+name: 'Одно и тоже'
+start_date: ''
+publish_date: ''
+status: 'In Progress'
 ---
 
 Среда 7 утра. Обычный день для жителей города, которые уже полтора века не живут правдой реальности.
