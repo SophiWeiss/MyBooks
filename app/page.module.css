@@ -13,6 +13,14 @@
     padding-bottom: 70px;
 }
 
+@media (max-width: 760px) {
+    .main {
+        max-height: unset;
+        padding-bottom: 0;
+        justify-content: flex-start;
+    }
+}
+
 .title {
     text-align: center;
 }

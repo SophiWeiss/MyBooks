@@ -53,10 +53,7 @@
 }
 
 .bookCard {
-    --padding-x: 15px;
-    --padding-y: 25px;
-    position: relative;
-    padding: var(--padding-x) var(--padding-y);
+    padding: 15px 25px;
     display: inline-block;
     min-width: 250px;
     max-width: 400px;
@@ -82,6 +79,9 @@
 
 .bookTitle {
     color: var(--color-accent-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 [data-theme='dark'] .bookTitle {
@@ -90,6 +90,7 @@
 
 .bookDescription {
     color: var(--color-accent);
+    overflow: hidden;
 }
 
 [data-theme='dark'] .bookDescription {
@@ -100,9 +101,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    position: absolute;
-    top: var(--padding-x);
-    right: var(--padding-y);
 }
 
 .bookStatusText {

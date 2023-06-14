@@ -118,21 +118,25 @@ export default function Books() {
                 opacity: { duration: 0.3 }
               }}
             >
-              <h3 className={style.bookTitle}>{books[bookIndex].title}</h3>
+              <h3 className={style.bookTitle}>
+                {books[bookIndex].title}
+                <div className={style.bookStatus}>
+                  <div
+                    className={style.bookStatusIndicator}
+                    data-status={books[bookIndex].status}
+                  />
+                  <small
+                    className={[style.bookStatusText, nunito.className].join(
+                      ' '
+                    )}
+                  >
+                    {books[bookIndex].status}
+                  </small>
+                </div>
+              </h3>
               <p className={style.bookDescription}>
                 {books[bookIndex].description}
               </p>
-              <div className={style.bookStatus}>
-                <div
-                  className={style.bookStatusIndicator}
-                  data-status={books[bookIndex].status}
-                />
-                <small
-                  className={[style.bookStatusText, nunito.className].join(' ')}
-                >
-                  {books[bookIndex].status}
-                </small>
-              </div>
             </motion.div>
           </AnimatePresence>
         </Link>
