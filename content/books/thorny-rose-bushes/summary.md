@@ -1,8 +1,9 @@
 ---
-name: 'Колючие кусты Розы'
-start_date: ''
-publish_date: ''
-status: 'In Progress'
+title: 'Колючие кусты Розы'
+startDate: ''
+updatedAt: ''
+publishDate: ''
+status: 'Not Finished'
 ---
 
 Мир, где особенную магию нужно заслужить и пережить испытания на разных краях света. Мир, где все жители планеты, кроме

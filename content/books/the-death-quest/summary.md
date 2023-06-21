@@ -1,7 +1,8 @@
 ---
-name: 'Смертельный квест'
-start_date: ''
-publish_date: ''
+title: 'Смертельный квест'
+createdAt: ''
+updatedAt: ''
+publishedAt: ''
 status: 'Done'
 ---
 
