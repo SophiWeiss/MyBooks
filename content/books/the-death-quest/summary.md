@@ -2,7 +2,6 @@
 title: 'Смертельный квест'
 createdAt: ''
 updatedAt: ''
-publishedAt: ''
 status: 'Done'
 ---
 
