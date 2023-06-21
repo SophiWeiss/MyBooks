@@ -49,6 +49,8 @@ button {
 
 :root {
     --color-green: #79d082;
+    --color-yellow: #efc664;
+    --color-red: #f85b78;
     --color-background: white;
     --color-accent: #8771ed;
     --color-accent-muted: #cebfff;
@@ -65,6 +67,7 @@ button {
 
 [data-theme='dark'] {
     --color-green: #94e79d;
+    --color-yellow: #f8d15b;
     --color-background: #191a29;
     --color-accent: #b076ff;
     --color-accent-muted: #2b2e44;

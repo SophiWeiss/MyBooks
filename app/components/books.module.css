@@ -54,7 +54,9 @@
 
 .bookCard {
     padding: 15px 25px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     min-width: 250px;
     max-width: 400px;
     background: var(--color-accent-faint);
@@ -66,9 +68,12 @@
 }
 
 .bookCard:hover {
-    text-decoration: none;
     scale: 1.005;
     translate: 0 -4px;
+}
+
+a:has(.bookCard) {
+    text-decoration: none;
 }
 
 .bookCard:active {
@@ -101,6 +106,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    white-space: nowrap;
 }
 
 .bookStatusText {
@@ -120,6 +126,14 @@
 
 .bookStatusIndicator[data-status="Done"] {
     background: var(--color-green);
+}
+
+.bookStatusIndicator[data-status="In Progress"] {
+    background: var(--color-yellow);
+}
+
+.bookStatusIndicator[data-status="Not Finished"] {
+    background: var(--color-red);
 }
 
 .dots {

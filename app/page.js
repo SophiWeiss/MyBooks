@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ThemeSwitch from './components/theme'
 import Books from './components/books'
 import Link from 'next/link'
+import { getSortedBooksData } from '@lib/books'
 
 function Title() {
   return (
@@ -46,7 +47,7 @@ function Ukraine() {
   )
 }
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <header className={style.header}>
@@ -54,7 +55,7 @@ export default function Home() {
       </header>
       <main className={style.main}>
         <Title />
-        <Books />
+        <Books books={await getSortedBooksData()} />
       </main>
       <footer className={style.footer}>
         <License />
