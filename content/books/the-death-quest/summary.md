@@ -1,7 +1,7 @@
 ---
 title: 'Смертельный квест'
-createdAt: ''
-updatedAt: ''
+createdAt: '2016-10'
+updatedAt: '2021'
 status: 'Done'
 ---
 

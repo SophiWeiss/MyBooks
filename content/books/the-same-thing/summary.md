@@ -1,7 +1,7 @@
 ---
 title: 'Одно и тоже'
-createdAt: ''
-updatedAt: ''
+createdAt: '2023-06-11'
+updatedAt: '2023-06-20'
 status: 'In Progress'
 ---
 

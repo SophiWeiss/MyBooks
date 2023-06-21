@@ -1,7 +1,7 @@
 ---
 title: 'Колючие кусты Розы'
-createdAt: ''
-updatedAt: ''
+createdAt: '2022-12-02'
+updatedAt: '2023-06-02'
 status: 'Not Finished'
 ---
 
