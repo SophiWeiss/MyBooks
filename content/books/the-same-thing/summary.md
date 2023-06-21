@@ -2,7 +2,6 @@
 title: 'Одно и тоже'
 createdAt: ''
 updatedAt: ''
-publishedAt: ''
 status: 'In Progress'
 ---
 
