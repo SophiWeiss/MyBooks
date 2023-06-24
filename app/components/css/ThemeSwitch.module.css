@@ -18,7 +18,7 @@
     background: var(--color-accent-faint);
 }
 
-.themeModeSwitch {
+.themeSwitch {
     aspect-ratio: 1;
     height: 100%;
     border-radius: 100%;
