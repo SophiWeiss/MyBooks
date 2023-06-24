@@ -4,7 +4,10 @@ import './globals/global.css'
 import { Lora } from 'next/font/google'
 import Providers from './providers'
 
-const lora = Lora({ subsets: ['cyrillic', 'latin'] })
+const lora = Lora({
+  subsets: ['cyrillic', 'latin'],
+  style: ['normal', 'italic']
+})
 
 export const metadata = {
   title: 'My Books',
