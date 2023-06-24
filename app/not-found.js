@@ -7,7 +7,7 @@ export default function NotFound() {
       <p>
         This cat could not be found.
         <br />
-        Maybe try looking under the bed?
+        <small>Maybe try looking under the bed?</small>
       </p>
     </main>
   )
