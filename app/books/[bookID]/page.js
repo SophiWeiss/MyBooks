@@ -17,8 +17,12 @@ export default async function Book({ params }) {
   return (
     <article>
       <h1>{data.title}</h1>
-      <h2>{content[0].title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: content[0].contentHtml }} />
+      {content[0] && (
+        <>
+          <h2>{content[0].title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: content[0].contentHtml }} />
+        </>
+      )}
     </article>
   )
 }
