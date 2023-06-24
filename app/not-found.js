@@ -1,4 +1,5 @@
 import style from './page.module.css'
+import Link from 'next/link'
 
 export default function NotFound() {
   return (
@@ -7,7 +8,9 @@ export default function NotFound() {
       <p>
         This cat could not be found.
         <br />
-        <small>Maybe try looking under the bed?</small>
+        <small>
+          Maybe try looking under <Link href={'/'}>the bed?</Link>
+        </small>
       </p>
     </main>
   )
