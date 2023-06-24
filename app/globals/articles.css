@@ -6,10 +6,6 @@ article {
 
 article h1 {
     text-align: center;
-    color: var(--color-accent-dark);
-}
-
-[data-theme='dark'] article h1 {
     color: var(--color-accent);
 }
 
