@@ -4,7 +4,11 @@ export default function NotFound() {
   return (
     <main className={style.notFound}>
       <h1>404</h1>
-      <p>This page could not be found.</p>
+      <p>
+        This cat could not be found.
+        <br />
+        Maybe try looking under the bed?
+      </p>
     </main>
   )
 }
