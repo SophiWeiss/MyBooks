@@ -1,0 +1,19 @@
+article {
+    align-items: flex-start;
+    max-width: 720px;
+    align-self: center;
+}
+
+article h1 {
+    text-align: center;
+    color: var(--color-accent);
+}
+
+article p {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+}
+
+[data-theme='dark'] article p {
+    color: var(--color-text-muted);
+}

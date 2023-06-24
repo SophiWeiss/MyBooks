@@ -1,12 +1,14 @@
 'use client'
 
-import style from './books.module.css'
-import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
+import style from './css/Books.module.css'
 import { Nunito } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { motion, wrap } from 'framer-motion'
 import Link from 'next/link'
+import Card from './Card'
+import Dots from './Dots'
+import Arrow from './Arrow'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
@@ -32,30 +34,9 @@ const variants = {
   }
 }
 
-function Arrow({ right, left, onClick }) {
-  return (
-    <button
-      data-right={right}
-      data-left={left}
-      className={style.arrow}
-      onClick={onClick}
-    >
-      {right && <BsChevronRight />}
-      {left && <BsChevronLeft />}
-    </button>
-  )
-}
-
-function Dots({ count, selectedIndex }) {
-  const dots = Array.from({ length: count }).map((_, i) => (
-    <div key={i} className={style.dot} data-selected={i === selectedIndex} />
-  ))
-
-  return (
-    <Link href={'/books'} className={style.dots}>
-      {dots}
-    </Link>
-  )
+const transition = {
+  x: { type: 'spring', stiffness: 300, damping: 30 },
+  opacity: { duration: 0.3 }
 }
 
 export default function Books({ books }) {
@@ -79,40 +60,37 @@ export default function Books({ books }) {
             mode={'popLayout'}
           >
             <motion.div
-              className={style.bookCard}
               key={book}
               custom={direction}
               variants={variants}
               initial={'enter'}
               animate={'center'}
               exit={'exit'}
-              transition={{
-                x: { type: 'spring', stiffness: 300, damping: 30 },
-                opacity: { duration: 0.3 }
-              }}
+              transition={transition}
             >
-              <h3 className={style.bookTitle}>
-                {bookData.title}
-                <div className={style.bookStatus}>
-                  <div
-                    className={style.bookStatusIndicator}
-                    data-status={bookData.status}
-                  />
-                  <small
-                    className={[style.bookStatusText, nunito.className].join(
-                      ' '
-                    )}
-                  >
-                    {bookData.status}
-                  </small>
+              <Card>
+                <div className={style.bookTitle}>
+                  <h3>{bookData.title}</h3>
+                  <div className={style.bookStatus}>
+                    <div
+                      className={style.bookStatusIndicator}
+                      data-status={bookData.status}
+                    />
+                    <small
+                      className={[style.bookStatusText, nunito.className].join(
+                        ' '
+                      )}
+                    >
+                      {bookData.status}
+                    </small>
+                  </div>
                 </div>
-              </h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: bookData.description
-                }}
-                className={style.bookDescription}
-              />
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: bookData.contentHtml
+                  }}
+                />
+              </Card>
             </motion.div>
           </AnimatePresence>
         </Link>

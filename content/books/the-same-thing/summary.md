@@ -1,8 +1,8 @@
 ---
-title: 'Одно и тоже'
-createdAt: ''
-updatedAt: ''
-status: 'In Progress'
+title: Одно и тоже
+createdAt: 2023-06-11
+updatedAt: 2023-06-20
+status: In Progress
 ---
 
 Среда, 7 утра. Обычный день для жителей города, которые уже полтора века не живут реальностю. Как далеко может завести
