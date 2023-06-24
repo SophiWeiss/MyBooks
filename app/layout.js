@@ -1,4 +1,5 @@
 import './global.css'
+import './articles.css'
 import { Lora } from 'next/font/google'
 import { Providers } from './providers'
 

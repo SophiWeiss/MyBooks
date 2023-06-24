@@ -1,0 +1,31 @@
+article {
+    align-items: flex-start;
+    max-width: 720px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+article h1 {
+    margin: 1rem auto;
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--color-accent-faint);
+    border: 3px solid var(--color-accent-muted);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    color: var(--color-accent-dark);
+}
+
+[data-theme='dark'] article h1 {
+    color: var(--color-accent);
+}
+
+article p {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+}
+
+[data-theme='dark'] article p {
+    color: var(--color-text-muted);
+}

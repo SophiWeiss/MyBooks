@@ -109,7 +109,7 @@ export default function Books({ books }) {
               </h3>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: bookData.description
+                  __html: bookData.contentHtml
                 }}
                 className={style.bookDescription}
               />
