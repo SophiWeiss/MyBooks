@@ -17,7 +17,7 @@ export default function ThemeSwitch() {
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           className={style.themeSwitch}
         >
-          <motion.div layout className={style.themeSwitch} />
+          <motion.div layout className={style.themeModeSwitch} />
         </button>
       ) : (
         <div className={style.themeSwitchUnmounted} />
