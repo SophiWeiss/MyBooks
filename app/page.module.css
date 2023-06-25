@@ -40,3 +40,7 @@
 .notFound h1 {
     color: var(--color-accent);
 }
+
+.notFound small {
+    color: var(--color-text-muted);
+}

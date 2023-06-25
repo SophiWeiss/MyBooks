@@ -1,4 +1,4 @@
-- [ ] finish homepage
+- [x] finish homepage
   - [x] static version
     - [x] html layout
     - [x] css styling
@@ -7,7 +7,7 @@
       - [x] links
       - [x] ukraine and book card
   - [x] ability to see all books and switch between them 
-    - [ ] fetch books
+    - [x] fetch books
   - [x] change themes switch
   - [x] dots
 - [ ] add ability to render books in `books` folder from .md source
@@ -17,7 +17,7 @@
   - [ ] font size
   - [ ] funny mode?
 - [ ] Ukraine page
-- [ ] About me section
+- [x] About me section
 - [ ] miniwiki for every book
 - [ ] all books page
 - [ ] mobile

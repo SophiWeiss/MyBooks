@@ -9,11 +9,58 @@ article h1 {
     color: var(--color-accent);
 }
 
-article p {
-    margin: 1.5rem 0;
+article p, article ul, article blockquote {
     font-size: 1.2rem;
 }
 
-[data-theme='dark'] article p {
+article p, article h2, article h3, article ul, article blockquote, article ul li:has(p) {
+    margin: 1.5rem 0;
+}
+
+article ul p {
+    margin: 0;
+}
+
+article ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+article li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+article li::before {
+    content: "—";
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: var(--color-text-faint);
+}
+
+article blockquote {
+    position: relative;
+}
+
+article blockquote p {
+    padding: 17px 27px 17px 37px;
+    color: var(--color-text-blue);
+}
+
+article blockquote::before {
+    content: "";
+    width: 4px;
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    height: calc(100% - 14px);
+    background: var(--color-accent);
+    border-radius: 2px;
+    margin-right: 1.5rem;
+}
+
+[data-theme='dark'] article div > p,
+[data-theme='dark'] article div > ul {
     color: var(--color-text-muted);
 }
