@@ -45,7 +45,7 @@ article blockquote {
 
 article blockquote p {
     padding: 17px 27px 17px 37px;
-    color: var(--color-text-faint);
+    color: var(--color-text-blue);
 }
 
 article blockquote::before {
