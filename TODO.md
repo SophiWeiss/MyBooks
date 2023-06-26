@@ -16,7 +16,7 @@
   - [ ] full screen (zen mode) support
   - [ ] font size
   - [ ] funny mode?
-- [ ] Ukraine page
+- [x] Ukraine page
 - [x] About me section
 - [ ] miniwiki for every book
 - [ ] all books page

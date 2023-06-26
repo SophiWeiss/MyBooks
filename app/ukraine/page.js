@@ -3,12 +3,12 @@ import Markdown from '@/components/Markdown'
 import path from 'path'
 
 export const metadata = {
-  title: 'About Me'
+  title: 'Ukraine💙💛'
 }
 
-const mdPath = path.join(process.cwd(), path.join('content', 'about-me.md'))
+const mdPath = path.join(process.cwd(), path.join('content', 'ukraine.md'))
 
-export default async function AboutMe() {
+export default async function Ukraine() {
   const { content } = await readMd(mdPath)
   return (
     <article>

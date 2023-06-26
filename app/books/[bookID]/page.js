@@ -1,10 +1,10 @@
 import { getBookContent, getBookData, getSortedBooksData } from '@lib/books'
+import Markdown from '@/components/Markdown'
 
 export const dynamicParams = false
 
 export async function generateStaticParams() {
   const books = await getSortedBooksData()
-
   return books.map(book => ({
     bookID: book.id
   }))
@@ -12,17 +12,13 @@ export async function generateStaticParams() {
 
 export default async function Book({ params }) {
   let { bookID } = params
-  let content = await getBookContent(bookID)
-  let data = await getBookData(bookID)
+  let chapters = await getBookContent(bookID)
+  let { title } = await getBookData(bookID)
+  let { content } = chapters[0]
   return (
     <article>
-      <h1>{data.title}</h1>
-      {content[0] && (
-        <>
-          <h2>{content[0].title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: content[0].contentHtml }} />
-        </>
-      )}
+      <h1>{title}</h1>
+      {chapters[0] && <Markdown>{content}</Markdown>}
     </article>
   )
 }
