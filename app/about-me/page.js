@@ -1,15 +1,18 @@
-import { renderMd } from '@lib/markdown'
+import { readMd } from '@lib/markdown'
+import Markdown from '@/components/Markdown'
+import path from 'path'
 
 export const metadata = {
   title: 'About Me'
 }
 
+const mdPath = path.join(process.cwd(), path.join('content', 'about-me.md'))
+
 export default async function AboutMe() {
-  const { title, contentHtml } = await renderMd('content/about-me.md')
+  const { content } = await readMd(mdPath)
   return (
     <article>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <Markdown>{content}</Markdown>
     </article>
   )
 }

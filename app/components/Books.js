@@ -9,6 +9,7 @@ import Link from 'next/link'
 import Card from './Card'
 import Dots from './Dots'
 import Arrow from './Arrow'
+import Markdown from './Markdown'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
@@ -85,11 +86,7 @@ export default function Books({ books }) {
                     </small>
                   </div>
                 </div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: bookData.contentHtml
-                  }}
-                />
+                <Markdown>{bookData.content}</Markdown>
               </Card>
             </motion.div>
           </AnimatePresence>
