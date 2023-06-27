@@ -16,7 +16,7 @@
   - [ ] full screen (zen mode) support
   - [ ] font size
   - [ ] funny mode?
-  - [ ] rewrite md rendering with react-markdown
+  - [x] rewrite md rendering with react-markdown
 - [x] Ukraine page
 - [x] About me section
 - [ ] miniwiki for every book
