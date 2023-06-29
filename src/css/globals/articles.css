@@ -1,7 +1,5 @@
 article {
-    align-items: flex-start;
     max-width: 720px;
-    align-self: center;
 }
 
 article h1 {

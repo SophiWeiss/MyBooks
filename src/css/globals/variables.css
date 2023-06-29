@@ -13,7 +13,8 @@
     --color-text-blue: #7970af;
     --shadow: 4px 4px 20px var(--color-accent-faint);
     --shadow-active: 0 0 12px var(--color-accent-faint);
-    --shadow-hover: 4px 4px 30px var(--color-accent-faint)
+    --shadow-hover: 4px 4px 30px var(--color-accent-faint);
+    --padding: 25px;
 }
 
 [data-theme='dark'] {
