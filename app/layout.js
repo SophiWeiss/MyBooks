@@ -1,8 +1,8 @@
-import './globals/articles.css'
-import './globals/colors.css'
-import './globals/global.css'
+import '@/css/globals/articles.css'
+import '@/css/globals/colors.css'
+import '@/css/globals/global.css'
 import { Lora } from 'next/font/google'
-import Providers from './providers'
+import Providers from '@/providers'
 
 const lora = Lora({
   subsets: ['cyrillic', 'latin'],

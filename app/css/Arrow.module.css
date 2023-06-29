@@ -1,0 +1,7 @@
+.arrow[data-right=true] svg {
+    translate: 2px;
+}
+
+.arrow[data-left=true] svg {
+    translate: -2px;
+}

@@ -1,15 +1,15 @@
 'use client'
 
-import style from './css/Books.module.css'
+import style from '@/css/Books.module.css'
 import { Nunito } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { motion, wrap } from 'framer-motion'
 import Link from 'next/link'
-import Card from './Card'
-import Dots from './Dots'
-import Arrow from './Arrow'
-import Markdown from './Markdown'
+import Card from '@/components/Card'
+import Dots from '@/components/Dots'
+import Arrow from '@/components/Arrow'
+import Markdown from '@/components/Markdown'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 

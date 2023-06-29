@@ -4,7 +4,7 @@ import { getSortedBooksData } from '@lib/books'
 import ThemeSwitch from './components/ThemeSwitch'
 import Books from './components/Books'
 import Ukraine from './components/Ukraine'
-import License from './components/License'
+import License from '@/components/License'
 
 export default async function Home() {
   return (

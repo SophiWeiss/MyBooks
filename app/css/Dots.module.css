@@ -1,20 +1,6 @@
 .dots {
-    display: flex;
     gap: 5px;
     padding: 13px;
-    border-radius: 30px;
-    border: 3px solid transparent;
-    transition: .3s, translate .15s;
-}
-
-.dots:hover {
-    background: var(--color-accent-faint);
-    box-shadow: var(--shadow);
-    border: 3px solid var(--color-accent-muted);
-}
-
-.dots:active {
-    translate: 0 4px;
 }
 
 .dot {
