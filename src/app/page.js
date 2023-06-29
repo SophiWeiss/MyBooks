@@ -1,10 +1,10 @@
-import style from './css/page.module.css'
+import style from './page.module.css'
 import Link from 'next/link'
-import { getSortedBooksData } from '@lib/books'
-import ThemeSwitch from './components/ThemeSwitch'
-import Books from './components/Books'
-import Ukraine from './components/Ukraine'
-import License from './components/License'
+import { getSortedBooksData } from '@/lib/books'
+import ThemeSwitch from '@/components/ThemeSwitch'
+import Books from '@/components/Books'
+import Ukraine from '@/components/Ukraine'
+import License from '@/components/License'
 
 export default async function Home() {
   return (

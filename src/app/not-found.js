@@ -1,4 +1,4 @@
-import style from './css/page.module.css'
+import style from '@/app/page.module.css'
 import Link from 'next/link'
 
 export default function NotFound() {

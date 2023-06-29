@@ -1,4 +1,4 @@
-import { readMd } from '@lib/markdown'
+import { readMd } from '@/lib/markdown'
 import Markdown from '@/components/Markdown'
 
 export const metadata = {

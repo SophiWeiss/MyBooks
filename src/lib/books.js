@@ -1,9 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-
-const booksDirectory = path.join(process.cwd(), path.join('content', 'books'))
-
 import { readMd } from './markdown'
+
+const booksDirectory = path.join(process.cwd(), 'content', 'books')
+
 export async function getSortedBooksData() {
   const fileNames = fs.readdirSync(booksDirectory)
   const allPostsData = await Promise.all(fileNames.map(getBookData))
@@ -13,13 +13,13 @@ export async function getSortedBooksData() {
 }
 
 export async function getBookData(id) {
-  const summaryPath = path.join(path.join('books', id), 'summary.md')
+  const summaryPath = path.join('books', id, 'summary.md')
   return { id, ...(await readMd(summaryPath)) }
 }
 
 export async function getBookContent(id) {
-  const chaptersFullPath = path.join(booksDirectory, path.join(id, 'chapters'))
-  const chaptersRelativePath = path.join('books', path.join(id, 'chapters'))
+  const chaptersFullPath = path.join(booksDirectory, id, 'chapters')
+  const chaptersRelativePath = path.join('books', id, 'chapters')
   return await Promise.all(
     fs
       .readdirSync(chaptersFullPath)

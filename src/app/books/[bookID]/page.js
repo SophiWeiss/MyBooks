@@ -1,4 +1,4 @@
-import { getBookContent, getBookData, getSortedBooksData } from '@lib/books'
+import { getBookContent, getBookData, getSortedBooksData } from '@/lib/books'
 import Markdown from '@/components/Markdown'
 
 export const dynamicParams = false
