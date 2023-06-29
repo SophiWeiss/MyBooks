@@ -1,0 +1,24 @@
+body .dots {
+    padding: 13px;
+}
+
+.dots {
+    gap: 5px;
+    composes: button1 from 'src/css/buttons.module.css';
+}
+
+.dot {
+    background: var(--color-accent-muted);
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    transition: background-color .3s;
+}
+
+.dots:hover .dot {
+    background: var(--color-background);
+}
+
+.dots .dot[data-selected=true] {
+    background: var(--color-accent-dark);
+}

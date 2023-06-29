@@ -1,19 +1,10 @@
 .Ukraine {
+    --translate: 2px;
+    composes: button2 from 'src/css/buttons.module.css';
     display: block;
     width: 60px;
     height: 40px;
     flex-shrink: 0;
-    transition: scale .3s, translate .3s;
-}
-
-.Ukraine:hover {
-    scale: 1.01;
-    translate: 0 -3px;
-}
-
-.Ukraine:active {
-    translate: 0 3px;
-    transition: translate .15s;
 }
 
 .UkraineBlue {

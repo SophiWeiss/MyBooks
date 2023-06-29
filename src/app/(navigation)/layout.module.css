@@ -1,0 +1,24 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.navLeft, .navRight {
+    position: fixed;
+}
+
+.navLeft {
+    --home-padding: 10px;
+    top: calc(var(--padding) - var(--home-padding));
+    left: calc(var(--padding) - var(--home-padding));
+}
+
+.navRight {
+    top: var(--padding);
+    right: var(--padding);
+}
+
+.homeLink {
+    composes: button1 from 'src/css/buttons.module.css';
+    padding: var(--home-padding);
+}

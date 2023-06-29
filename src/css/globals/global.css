@@ -4,10 +4,14 @@
     box-sizing: border-box;
 }
 
+:focus {
+    outline-color: var(--color-yellow);
+}
+
 body {
     color: var(--color-text-normal);
     background: var(--color-background);
-    padding: 25px;
+    padding: var(--padding);
     min-height: 100svh;
     display: flex;
     flex-direction: column;
