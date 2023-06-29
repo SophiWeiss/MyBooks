@@ -19,6 +19,7 @@
   - [x] rewrite md rendering with react-markdown
 - [x] Ukraine page
 - [x] About me section
-- [ ] miniwiki for every book
 - [ ] all books page
 - [ ] mobile
+- [ ] blog and novels
+- [ ] miniwiki for every book
