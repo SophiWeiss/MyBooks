@@ -1,6 +1,6 @@
-import './css/articles.css'
-import './css/colors.css'
-import './css/global.css'
+import './css/globals/articles.css'
+import './css/globals/variables.css'
+import './css/globals/global.css'
 import { Lora } from 'next/font/google'
 import Providers from './providers'
 

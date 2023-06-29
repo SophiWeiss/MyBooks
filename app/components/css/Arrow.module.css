@@ -1,3 +1,8 @@
+.arrow {
+    --padding: 8px;
+    composes: button1 from 'app/css/buttons.module.css';
+}
+
 .arrow[data-right=true] svg {
     translate: 2px;
 }

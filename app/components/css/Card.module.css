@@ -1,4 +1,6 @@
 .card {
+    --translate: 4px;
+    composes: button2 from 'app/css/buttons.module.css';
     padding: 15px 25px;
     display: flex;
     flex-direction: column;
@@ -8,23 +10,11 @@
     background: var(--color-accent-faint);
     border: 3px solid var(--color-accent-muted);
     border-radius: 20px;
-    box-shadow: var(--shadow);
-    transition: scale .3s, translate .3s;
     user-select: none;
-}
-
-.card:hover {
-    scale: 1.005;
-    translate: 0 -4px;
 }
 
 a:has(.card) {
     text-decoration: none;
-}
-
-.card:active {
-    translate: 0 4px;
-    transition: .15s;
 }
 
 .card h1, .card h2, .card h3 {

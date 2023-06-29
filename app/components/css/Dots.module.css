@@ -1,6 +1,7 @@
 .dots {
     gap: 5px;
-    padding: 13px;
+    --padding: 13px;
+    composes: button1 from 'app/css/buttons.module.css';
 }
 
 .dot {
