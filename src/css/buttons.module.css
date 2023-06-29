@@ -5,7 +5,7 @@
     align-items: center;
     border-radius: 999px;
     border: 3px solid transparent;
-    transition: .3s, translate .15s, box-shadow .15s;
+    transition: background-color .3s, border .3s, translate .15s, box-shadow .15s;
     flex-shrink: 0;
 }
 
@@ -37,7 +37,7 @@
 
 .button2 {
     box-shadow: var(--shadow);
-    transition: .3s;
+    transition: translate .3s, box-shadow .3s;
 }
 
 .button2:hover {
@@ -48,5 +48,5 @@
 .button2:active {
     translate: 0 var(--translate);
     box-shadow: var(--shadow-active);
-    transition: .15s;
+    transition: translate .15s, box-shadow .15s;
 }
