@@ -1,6 +1,6 @@
-import style from '@/css/Dots.module.css'
+import style from './css/Dots.module.css'
 import Link from 'next/link'
-import Button from '@/components/Button'
+import Button from './Button'
 
 export default function Dots({ count, selectedIndex }) {
   const dots = Array.from({ length: count }).map((_, i) => (

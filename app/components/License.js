@@ -1,4 +1,4 @@
-import style from '@/css/License.module.css'
+import style from './css/License.module.css'
 import Image from 'next/image'
 
 export default function License() {

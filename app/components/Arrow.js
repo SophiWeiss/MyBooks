@@ -1,6 +1,6 @@
-import style from '@/css/Arrow.module.css'
+import style from './css/Arrow.module.css'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-import Button from '@/components/Button'
+import Button from './Button'
 
 export default function Arrow({ right, left, onClick }) {
   let icon

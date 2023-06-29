@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import style from '@/css/Ukraine.module.css'
+import style from './css/Ukraine.module.css'
 
 export default function Ukraine() {
   return (

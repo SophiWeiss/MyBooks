@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import style from '@/css/ThemeSwitch.module.css'
+import style from './css/ThemeSwitch.module.css'
 import { motion } from 'framer-motion'
 
 export default function ThemeSwitch() {
