@@ -10,18 +10,14 @@ export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
 
-  return (
-    <>
-      {mounted ? (
-        <button
-          onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-          className={style.themeSwitch}
-        >
-          <motion.div layout className={style.themeModeSwitch} />
-        </button>
-      ) : (
-        <div className={style.themeSwitchUnmounted} />
-      )}
-    </>
+  return mounted ? (
+    <button
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      className={style.themeSwitch}
+    >
+      <motion.div layout className={style.themeModeSwitch} />
+    </button>
+  ) : (
+    <div className={style.themeSwitchUnmounted} />
   )
 }

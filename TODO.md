@@ -17,6 +17,7 @@
   - [ ] full screen (zen mode) support
   - [ ] font size
   - [ ] commenting?
+  - [ ] rewrite Card component to css module
   - [x] rewrite md rendering with react-markdown
 - [x] Ukraine page
 - [x] About me section

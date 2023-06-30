@@ -6,10 +6,10 @@ import Markdown from './Markdown'
 
 const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
-export default function BookCard({ book }) {
+export default function BookCard({ book, ...other }) {
   return (
     <Link href={`/books/${book.id}`}>
-      <Card>
+      <Card {...other}>
         <div className={style.bookTitle}>
           <h3>{book.title}</h3>
           <div className={style.bookStatus}>
