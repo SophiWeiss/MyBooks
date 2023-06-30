@@ -2,6 +2,10 @@ import style from './page.module.css'
 import { getSortedBooksData } from '@/lib/books'
 import BookCard from '@/components/BookCard'
 
+export const metadata = {
+  title: 'All Books'
+}
+
 export default async function AllBooks() {
   const books = (await getSortedBooksData()).map(book => (
     <li key={book.id}>
