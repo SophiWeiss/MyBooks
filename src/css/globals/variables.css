@@ -9,8 +9,8 @@
     --color-accent-dark: #4a3492;
     --color-text-normal: #363341;
     --color-text-muted: #7c7798;
-    --color-text-faint: #a8a0d7;
-    --color-text-blue: #6f64b0;
+    --color-text-faint: #b0a8e0;
+    --color-text-blue: #7f74c5;
     --shadow: 4px 4px 20px var(--color-accent-faint);
     --shadow-active: 0 0 12px var(--color-accent-faint);
     --shadow-hover: 4px 4px 30px var(--color-accent-faint);
