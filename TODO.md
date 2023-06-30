@@ -1,25 +1,28 @@
-- [x] finish homepage
-  - [x] static version
+- finish homepage
+  - static version
     - [x] html layout
     - [x] css styling
-    - [x] css animations
+    - css animations
       - [x] arrows
       - [x] links
       - [x] ukraine and book card
-  - [x] ability to see all books and switch between them 
+  - ability to see all books and switch between them 
     - [x] fetch books
+    - [ ] persist selected book
   - [x] change themes switch
   - [x] dots
-- [ ] add ability to render books in `books` folder from .md source
+- book page
   - [ ] navigation between chapters
   - [ ] save current chapter in local storage
   - [ ] full screen (zen mode) support
   - [ ] font size
-  - [ ] funny mode?
+  - [ ] commenting?
   - [x] rewrite md rendering with react-markdown
 - [x] Ukraine page
 - [x] About me section
-- [ ] all books page
+- all books page
+  - [ ] masonry layout?
+- [ ] full menu in navigation bar
 - [ ] mobile
 - [ ] blog and novels
 - [ ] miniwiki for every book
