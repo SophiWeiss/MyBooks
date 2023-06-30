@@ -1,17 +1,12 @@
 'use client'
 
 import style from './css/Books.module.css'
-import { Nunito } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { motion, wrap } from 'framer-motion'
-import Link from 'next/link'
-import Card from './Card'
 import Dots from './Dots'
 import Arrow from './Arrow'
-import Markdown from './Markdown'
-
-const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
+import BookCard from '/src/components/BookCard'
 
 const variants = {
   enter: direction => {
@@ -54,43 +49,19 @@ export default function Books({ books }) {
     <>
       <div className={style.books}>
         <Arrow left onClick={() => paginate(-1)} />
-        <Link href={`/books/${bookData.id}`}>
-          <AnimatePresence
-            initial={false}
+        <AnimatePresence initial={false} custom={direction} mode={'popLayout'}>
+          <motion.div
+            key={book}
             custom={direction}
-            mode={'popLayout'}
+            variants={variants}
+            initial={'enter'}
+            animate={'center'}
+            exit={'exit'}
+            transition={transition}
           >
-            <motion.div
-              key={book}
-              custom={direction}
-              variants={variants}
-              initial={'enter'}
-              animate={'center'}
-              exit={'exit'}
-              transition={transition}
-            >
-              <Card>
-                <div className={style.bookTitle}>
-                  <h3>{bookData.title}</h3>
-                  <div className={style.bookStatus}>
-                    <div
-                      className={style.bookStatusIndicator}
-                      data-status={bookData.status}
-                    />
-                    <small
-                      className={[style.bookStatusText, nunito.className].join(
-                        ' '
-                      )}
-                    >
-                      {bookData.status}
-                    </small>
-                  </div>
-                </div>
-                <Markdown>{bookData.content}</Markdown>
-              </Card>
-            </motion.div>
-          </AnimatePresence>
-        </Link>
+            <BookCard book={bookData} />
+          </motion.div>
+        </AnimatePresence>
         <Arrow right onClick={() => paginate(1)} />
       </div>
       <Dots count={books.length} selectedIndex={bookIndex} />

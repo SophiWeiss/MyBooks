@@ -20,5 +20,8 @@
 
 .homeLink {
     composes: button1 from 'src/css/buttons.module.css';
+}
+
+body .homeLink {
     padding: var(--home-padding);
 }
