@@ -8,7 +8,7 @@
       - [x] ukraine and book card
   - ability to see all books and switch between them 
     - [x] fetch books
-    - [ ] persist selected book
+    - [x] persist selected book
   - [x] change themes switch
   - [x] dots
 - book page

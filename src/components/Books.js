@@ -2,7 +2,7 @@
 
 import style from './css/Books.module.css'
 import { AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, wrap } from 'framer-motion'
 import Dots from './Dots'
 import Arrow from './Arrow'
@@ -36,32 +36,45 @@ const transition = {
 }
 
 export default function Books({ books }) {
-  const [[book, direction], setBook] = useState([0, 0])
+  const [[book, direction], setBook] = useState([null, 0])
+
+  useEffect(() => {
+    setBook([parseInt(localStorage.getItem('book')) || 0, 0])
+  }, [])
 
   const bookIndex = wrap(0, books.length, book)
   const bookData = books[bookIndex]
 
   const paginate = newDirection => {
     setBook([book + newDirection, newDirection])
+    localStorage.setItem('book', book + newDirection)
   }
 
   return (
     <>
       <div className={style.books}>
         <Arrow left onClick={() => paginate(-1)} />
-        <AnimatePresence initial={false} custom={direction} mode={'popLayout'}>
-          <motion.div
-            key={book}
+        {book === null ? (
+          <div className={style.bookCardEmpty} />
+        ) : (
+          <AnimatePresence
+            initial={false}
             custom={direction}
-            variants={variants}
-            initial={'enter'}
-            animate={'center'}
-            exit={'exit'}
-            transition={transition}
+            mode={'popLayout'}
           >
-            <BookCard book={bookData} />
-          </motion.div>
-        </AnimatePresence>
+            <motion.div
+              key={book}
+              custom={direction}
+              variants={variants}
+              initial={'enter'}
+              animate={'center'}
+              exit={'exit'}
+              transition={transition}
+            >
+              <BookCard book={bookData} />
+            </motion.div>
+          </AnimatePresence>
+        )}
         <Arrow right onClick={() => paginate(1)} />
       </div>
       <Dots count={books.length} selectedIndex={bookIndex} />

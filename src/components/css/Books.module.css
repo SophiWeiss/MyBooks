@@ -6,3 +6,9 @@
     max-width: 700px;
     gap: 20px;
 }
+
+.bookCardEmpty {
+    composes: card from 'src/css/card.module.css';
+    width: 400px;
+    height: 200px;
+}
