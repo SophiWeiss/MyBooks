@@ -1,6 +1,6 @@
 .card {
     --translate: 4px;
-    composes: button2 from 'src/css/buttons.module.css';
+    composes: button2 from './buttons.module.css';
     padding: 15px 25px;
     display: flex;
     flex-direction: column;

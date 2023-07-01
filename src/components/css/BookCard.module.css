@@ -1,3 +1,7 @@
+.bookCard {
+    composes: card from 'src/css/card.module.css';
+}
+
 .bookTitle {
     display: flex;
     justify-content: space-between;
