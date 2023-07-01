@@ -23,7 +23,7 @@
 - [x] About me section
 - all books page
   - [x] masonry layout
-  - [ ] fix navigation overlaying when scrolling
+  - [x] fix navigation overlaying when scrolling
 - [ ] full menu in navigation bar
 - [ ] mobile
 - [ ] blog and novels
