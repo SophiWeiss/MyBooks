@@ -66,3 +66,14 @@ button {
 [data-theme='dark'] img {
     opacity: 0.8;
 }
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 6px solid #0000;
+    background-clip: padding-box;
+    border-radius: 999px;
+    background-color: var(--color-accent-muted);
+}
