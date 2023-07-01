@@ -1,0 +1,13 @@
+.allBooks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    flex: 1;
+}
+
+.header {
+    text-align: center;
+    align-self: center;
+    color: var(--color-accent)
+}

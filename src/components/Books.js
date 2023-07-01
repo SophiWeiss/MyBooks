@@ -1,17 +1,12 @@
 'use client'
 
 import style from './css/Books.module.css'
-import { Nunito } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, wrap } from 'framer-motion'
-import Link from 'next/link'
-import Card from './Card'
 import Dots from './Dots'
 import Arrow from './Arrow'
-import Markdown from './Markdown'
-
-const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
+import BookCard from '/src/components/BookCard'
 
 const variants = {
   enter: direction => {
@@ -41,20 +36,27 @@ const transition = {
 }
 
 export default function Books({ books }) {
-  const [[book, direction], setBook] = useState([0, 0])
+  const [[book, direction], setBook] = useState([null, 0])
+
+  useEffect(() => {
+    setBook([parseInt(localStorage.getItem('book')) || 0, 0])
+  }, [])
 
   const bookIndex = wrap(0, books.length, book)
   const bookData = books[bookIndex]
 
   const paginate = newDirection => {
     setBook([book + newDirection, newDirection])
+    localStorage.setItem('book', book + newDirection)
   }
 
   return (
     <>
       <div className={style.books}>
         <Arrow left onClick={() => paginate(-1)} />
-        <Link href={`/books/${bookData.id}`}>
+        {book === null ? (
+          <div className={style.bookCardEmpty} />
+        ) : (
           <AnimatePresence
             initial={false}
             custom={direction}
@@ -69,28 +71,10 @@ export default function Books({ books }) {
               exit={'exit'}
               transition={transition}
             >
-              <Card>
-                <div className={style.bookTitle}>
-                  <h3>{bookData.title}</h3>
-                  <div className={style.bookStatus}>
-                    <div
-                      className={style.bookStatusIndicator}
-                      data-status={bookData.status}
-                    />
-                    <small
-                      className={[style.bookStatusText, nunito.className].join(
-                        ' '
-                      )}
-                    >
-                      {bookData.status}
-                    </small>
-                  </div>
-                </div>
-                <Markdown>{bookData.content}</Markdown>
-              </Card>
+              <BookCard book={bookData} />
             </motion.div>
           </AnimatePresence>
-        </Link>
+        )}
         <Arrow right onClick={() => paginate(1)} />
       </div>
       <Dots count={books.length} selectedIndex={bookIndex} />

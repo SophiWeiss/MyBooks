@@ -57,8 +57,3 @@ article blockquote::before {
     border-radius: 2px;
     margin-right: 1.5rem;
 }
-
-[data-theme='dark'] article div > p,
-[data-theme='dark'] article div > ul {
-    color: var(--color-text-muted);
-}

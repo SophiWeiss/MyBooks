@@ -1,5 +1,5 @@
 import style from './layout.module.css'
-import { BsHouse } from 'react-icons/bs'
+import { BsHouseFill } from 'react-icons/bs'
 import Link from 'next/link'
 import ThemeSwitch from '@/components/ThemeSwitch'
 
@@ -8,7 +8,7 @@ export default function Navigation({ children }) {
     <main className={style.main}>
       <nav className={style.navLeft}>
         <Link href={'/'} className={style.homeLink}>
-          <BsHouse />
+          <BsHouseFill />
         </Link>
       </nav>
       {children}

@@ -1,14 +1,18 @@
+.cardBackground {
+    background: var(--color-accent-faint);
+    border: 3px solid var(--color-accent-muted);
+}
+
 .card {
     --translate: 4px;
-    composes: button2 from 'src/css/buttons.module.css';
+    composes: button2 from './buttons.module.css';
+    composes: cardBackground;
     padding: 15px 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     min-width: 250px;
     max-width: 400px;
-    background: var(--color-accent-faint);
-    border: 3px solid var(--color-accent-muted);
     border-radius: 20px;
     user-select: none;
 }

@@ -6,9 +6,9 @@ const booksDirectory = path.join(process.cwd(), 'content', 'books')
 
 export async function getSortedBooksData() {
   const fileNames = fs.readdirSync(booksDirectory)
-  const allPostsData = await Promise.all(fileNames.map(getBookData))
-  return allPostsData.sort((a, b) => {
-    return a.updatedAt < b.updatedAt ? 1 : -1
+  const allBooksData = await Promise.all(fileNames.map(getBookData))
+  return allBooksData.sort((a, b) => {
+    return a.index > b.index ? 1 : -1
   })
 }
 
