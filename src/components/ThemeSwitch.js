@@ -18,6 +18,6 @@ export default function ThemeSwitch() {
       <motion.div layout className={style.themeModeSwitch} />
     </button>
   ) : (
-    <div className={style.themeSwitchUnmounted} />
+    <div className={style.themeSwitch} />
   )
 }
