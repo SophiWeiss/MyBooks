@@ -24,7 +24,10 @@
 - all books page
   - [x] masonry layout
   - [x] fix navigation overlaying when scrolling
-- [ ] full menu in navigation bar
+- navigation
+  - [ ] all-in-one bar (opens with button click)
+  - [ ] theme switch inside new nav panel
+- [ ] option for default theme (triple theme switch (possible multiple themes))
 - [ ] mobile
-- [ ] blog and novels
-- [ ] miniwiki for every book
+- [ ] blogs
+- [ ] miniwiki for every book?

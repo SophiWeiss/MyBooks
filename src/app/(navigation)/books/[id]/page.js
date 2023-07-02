@@ -4,22 +4,22 @@ import Markdown from '@/components/Markdown'
 export const dynamicParams = false
 
 export async function generateMetadata({ params }) {
-  let { bookID } = params
-  let { title } = await getBookData(bookID)
+  let { id } = params
+  let { title } = await getBookData(id)
   return { title }
 }
 
 export async function generateStaticParams() {
   const books = await getSortedBooksData()
   return books.map(book => ({
-    bookID: book.id
+    id: book.id
   }))
 }
 
 export default async function Book({ params }) {
-  let { bookID } = params
-  let chapters = await getBookContent(bookID)
-  let { title } = await getBookData(bookID)
+  let { id } = params
+  let chapters = await getBookContent(id)
+  let { title } = await getBookData(id)
   let { content } = chapters[0]
   return (
     <article>
