@@ -1,4 +1,4 @@
-- finish homepage
+- homepage
   - static version
     - [x] html layout
     - [x] css styling
@@ -12,25 +12,30 @@
   - [x] change themes switch
     - [ ] option for default theme (triple theme switch (multiple themes?))
   - [x] dots
-- book page
+  - [ ] continue reading
+- chapter page
   - [ ] navigation between chapters
-  - [ ] save current chapter in local storage
   - [ ] full screen (zen mode) support
   - [ ] font size
   - [ ] mini-header for book name and chapter
+  - [ ] tags
   - [ ] commenting?
   - [x] rewrite Card component to css module
   - [x] rewrite md rendering with react-markdown
-- book content page
+- book page
   - [ ] name
   - [ ] full description
-  - [ ] dates
-  - [ ] hashtags
   - [ ] chapters
+  - [ ] dates
+  - [ ] tags (chapter tags as well)
+  - [ ] read indicator
+  - [ ] read time?
 - [x] Ukraine page
 - [x] About me section
 - all books page
   - [x] masonry layout
+  - [ ] read indicator
+  - [ ] tags
 - [ ] navigation between pages (menu)
 - [ ] control panel
 - [ ] mobile
