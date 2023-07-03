@@ -6,25 +6,33 @@
       - [x] arrows
       - [x] links
       - [x] ukraine and book card
-  - ability to see all books and switch between them 
+  - [x] ability to see all books and switch between them 
     - [x] fetch books
     - [x] persist selected book
   - [x] change themes switch
+    - [ ] option for default theme (triple theme switch (multiple themes?))
   - [x] dots
 - book page
   - [ ] navigation between chapters
   - [ ] save current chapter in local storage
   - [ ] full screen (zen mode) support
   - [ ] font size
+  - [ ] mini-header for book name and chapter
   - [ ] commenting?
   - [x] rewrite Card component to css module
   - [x] rewrite md rendering with react-markdown
+- book content page
+  - [ ] name
+  - [ ] full description
+  - [ ] dates
+  - [ ] hashtags
+  - [ ] chapters
 - [x] Ukraine page
 - [x] About me section
 - all books page
   - [x] masonry layout
-  - [x] fix navigation overlaying when scrolling
-- [ ] full menu in navigation bar
+- [ ] navigation between pages (menu)
+- [ ] control panel
 - [ ] mobile
-- [ ] blog and novels
-- [ ] miniwiki for every book
+- [ ] blogs?
+- [ ] miniwiki for every book?
