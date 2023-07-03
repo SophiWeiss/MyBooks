@@ -20,11 +20,12 @@ export default async function Book({ params }) {
   let { id } = params
   let chapters = await getBookContent(id)
   let { title } = await getBookData(id)
-  let { content } = chapters[0]
   return (
     <article>
       <h1>{title}</h1>
-      {chapters[0] && <Markdown>{content}</Markdown>}
+      {chapters.map(({ content }, i) => (
+        <Markdown key={i}>{content}</Markdown>
+      ))}
     </article>
   )
 }
