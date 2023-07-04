@@ -1,25 +1,55 @@
-.themeSwitch {
+.switch {
+    --padding: 3px;
     composes: cardBackground from 'src/css/card.module.css';
     display: flex;
-    width: 60px;
-    height: 32px;
-    border-radius: 16px;
-    padding: 4px;
+    flex-direction: column;
+    border-radius: 999px;
+    padding: var(--padding);
+    position: relative;
     box-shadow: var(--shadow);
-    justify-content: flex-start;
+    cursor: pointer;
 }
 
-[data-theme='dark'] .themeSwitch {
-    justify-content: flex-end;
+.switch button {
+    display: flex;
+    padding: 8px;
+    position: relative;
+    z-index: 2;
 }
 
-.themeModeSwitch {
+.switch button svg {
+    color: var(--color-text-blue);
+    transition: color .3s !important;
+}
+
+.switch button[data-selected='true'] svg {
+    color: var(--color-accent-faint);
+}
+
+.selected {
+    position: absolute;
+    width: calc(100% - 2 * var(--padding));
     aspect-ratio: 1;
-    height: 100%;
-    border-radius: 100%;
     background: var(--color-accent);
+    border-radius: 999px;
+    z-index: 1;
+    top: var(--padding);
+    left: var(--padding);
+    transition: translate .3s !important;
 }
 
-[data-theme='dark'] .themeModeSwitch {
+[data-theme='dark'] .selected {
     background: var(--color-accent-dark);
+}
+
+.selected[data-theme='dark'] {
+    translate: 0 0;
+}
+
+.selected[data-theme='system'] {
+    translate: 0 100%;
+}
+
+.selected[data-theme='light'] {
+    translate: 0 200%;
 }

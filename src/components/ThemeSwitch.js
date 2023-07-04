@@ -3,21 +3,41 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import style from './css/ThemeSwitch.module.css'
-import { motion } from 'framer-motion'
+import { BsFillMoonFill, BsSunFill } from 'react-icons/bs'
+import { RiComputerFill } from 'react-icons/ri'
 
 export default function ThemeSwitch() {
-  const { setTheme, resolvedTheme } = useTheme()
+  const { theme: currentTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+
+  const themes = [
+    { theme: 'dark', icon: <BsFillMoonFill key={'dark'} /> },
+    { theme: 'system', icon: <RiComputerFill key={'system'} /> },
+    { theme: 'light', icon: <BsSunFill key={'light'} /> }
+  ]
+
   useEffect(() => setMounted(true), [])
 
   return mounted ? (
-    <button
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className={style.themeSwitch}
-    >
-      <motion.div layout className={style.themeModeSwitch} />
-    </button>
+    <div className={style.switch}>
+      {themes.map(({ theme, icon }) => (
+        <button
+          key={theme}
+          data-selected={currentTheme === theme}
+          onClick={() => setTheme(theme)}
+        >
+          {icon}
+        </button>
+      ))}
+      <div className={style.selected} data-theme={currentTheme} />
+    </div>
   ) : (
-    <div className={style.themeSwitch} />
+    <div className={style.switch}>
+      {themes.map(({ theme, icon }) => (
+        <button key={theme} disabled>
+          {icon}
+        </button>
+      ))}
+    </div>
   )
 }

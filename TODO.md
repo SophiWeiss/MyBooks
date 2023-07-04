@@ -10,7 +10,7 @@
     - [x] fetch books
     - [x] persist selected book
   - [x] change themes switch
-    - [ ] option for default theme (triple theme switch (multiple themes?))
+    - [x] option for default theme (triple theme switch (multiple themes?))
   - [x] dots
   - [ ] continue reading
 - chapter page
