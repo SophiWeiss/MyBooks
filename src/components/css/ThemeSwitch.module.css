@@ -2,7 +2,6 @@
     --padding: 3px;
     composes: cardBackground from 'src/css/card.module.css';
     display: flex;
-    flex-direction: column;
     border-radius: 999px;
     padding: var(--padding);
     position: relative;
@@ -28,7 +27,7 @@
 
 .selected {
     position: absolute;
-    width: calc(100% - 2 * var(--padding));
+    height: calc(100% - 2 * var(--padding));
     aspect-ratio: 1;
     background: var(--color-accent);
     border-radius: 999px;
@@ -47,9 +46,9 @@
 }
 
 .selected[data-theme='system'] {
-    translate: 0 100%;
+    translate: 100% 0;
 }
 
 .selected[data-theme='light'] {
-    translate: 0 200%;
+    translate: 200% 0;
 }
