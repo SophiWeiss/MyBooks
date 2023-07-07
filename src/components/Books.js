@@ -42,7 +42,7 @@ export default function Books({ books }) {
     setBook([parseInt(localStorage.getItem('book')) || 0, 0])
   }, [])
 
-  const bookIndex = wrap(0, books.length, book)
+  const bookIndex = book === null ? null : wrap(0, books.length, book)
   const bookData = books[bookIndex]
 
   const paginate = newDirection => {
