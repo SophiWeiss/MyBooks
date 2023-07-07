@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { motion, wrap } from 'framer-motion'
 import Dots from './Dots'
 import Arrow from './Arrow'
-import BookCard from '/src/components/BookCard'
+import BookCard from './BookCard'
 
 const variants = {
   enter: direction => {
