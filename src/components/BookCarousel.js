@@ -1,9 +1,8 @@
 'use client'
 
-import style from './css/Books.module.css'
-import { AnimatePresence } from 'framer-motion'
+import style from './css/BookCarousel.module.css'
+import { AnimatePresence, motion, wrap } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { motion, wrap } from 'framer-motion'
 import Dots from './Dots'
 import Arrow from './Arrow'
 import BookCard from '/src/components/BookCard'
@@ -35,7 +34,7 @@ const transition = {
   opacity: { duration: 0.3 }
 }
 
-export default function Books({ books }) {
+export default function BookCarousel({ books }) {
   const [[book, direction], setBook] = useState([null, 0])
 
   useEffect(() => {
