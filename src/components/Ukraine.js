@@ -1,7 +1,7 @@
 import style from './css/Ukraine.module.css'
 import Link from 'next/link'
 
-export default function Ukraine({ size = 60 }) {
+export default function Ukraine({ size }) {
   return (
     <Link
       href={'/ukraine'}

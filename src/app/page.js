@@ -20,7 +20,7 @@ export default async function Home() {
       </main>
       <footer className={style.footer}>
         <License />
-        <Ukraine />
+        <Ukraine size={60} />
       </footer>
     </>
   )

@@ -7,7 +7,7 @@ export default function Navigation({ children }) {
       <nav className={style.nav}>
         <ThemeSwitch />
       </nav>
-      <main className={style.main}>{children}</main>
+      <main>{children}</main>
     </>
   )
 }
