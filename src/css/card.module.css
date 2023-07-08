@@ -17,7 +17,7 @@
     user-select: none;
 }
 
-a:has(.card) {
+.card:hover {
     text-decoration: none;
 }
 

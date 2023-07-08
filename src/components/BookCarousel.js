@@ -5,7 +5,7 @@ import { AnimatePresence, motion, wrap } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Dots from './Dots'
 import Arrow from './Arrow'
-import BookCard from '/src/components/BookCard'
+import BookCard from './BookCard'
 
 const variants = {
   enter: direction => {
@@ -41,7 +41,7 @@ export default function BookCarousel({ books }) {
     setBook([parseInt(localStorage.getItem('book')) || 0, 0])
   }, [])
 
-  const bookIndex = wrap(0, books.length, book)
+  const bookIndex = book === null ? null : wrap(0, books.length, book)
   const bookData = books[bookIndex]
 
   const paginate = newDirection => {
