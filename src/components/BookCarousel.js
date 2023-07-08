@@ -8,25 +8,21 @@ import Arrow from './Arrow'
 import BookCard from './BookCard'
 
 const variants = {
-  enter: direction => {
-    return {
-      x: direction > 0 ? 200 : -200,
-      opacity: 0,
-      scale: 0
-    }
-  },
+  enter: direction => ({
+    x: direction > 0 ? 200 : -200,
+    opacity: 0,
+    scale: 0
+  }),
   center: {
     x: 0,
     opacity: 1,
     scale: 1
   },
-  exit: direction => {
-    return {
-      x: direction < 0 ? 200 : -200,
-      opacity: 0,
-      scale: 0
-    }
-  }
+  exit: direction => ({
+    x: direction < 0 ? 200 : -200,
+    opacity: 0,
+    scale: 0
+  })
 }
 
 const transition = {
