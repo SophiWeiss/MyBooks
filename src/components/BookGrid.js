@@ -2,7 +2,7 @@
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useEffect, useState } from 'react'
-import BookCard from '@/components/BookCard'
+import BookCard from './BookCard'
 
 export default function BookGrid({ books }) {
   const bookElements = books.map(book => (

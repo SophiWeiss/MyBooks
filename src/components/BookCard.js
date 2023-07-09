@@ -7,24 +7,20 @@ const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
 export default function BookCard({ book, ...other }) {
   return (
-    <Link href={`/books/${book.id}`}>
-      <div className={style.bookCard} {...other}>
-        <div className={style.bookTitle}>
-          <h3>{book.title}</h3>
-          <div className={style.bookStatus}>
-            <div
-              className={style.bookStatusIndicator}
-              data-status={book.status}
-            />
-            <small
-              className={[style.bookStatusText, nunito.className].join(' ')}
-            >
-              {book.status}
-            </small>
-          </div>
+    <Link className={style.bookCard} href={`/books/${book.id}`} {...other}>
+      <div className={style.bookTitle}>
+        <h3>{book.title}</h3>
+        <div className={style.bookStatus}>
+          <div
+            className={style.bookStatusIndicator}
+            data-status={book.status}
+          />
+          <small className={[style.bookStatusText, nunito.className].join(' ')}>
+            {book.status}
+          </small>
         </div>
-        <Markdown>{book.content}</Markdown>
       </div>
+      <Markdown>{book.content}</Markdown>
     </Link>
   )
 }
