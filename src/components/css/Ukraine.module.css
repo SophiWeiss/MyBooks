@@ -2,8 +2,6 @@
     --translate: 2px;
     composes: button2 from 'src/css/buttons.module.css';
     display: block;
-    width: 60px;
-    height: 40px;
     flex-shrink: 0;
 }
 

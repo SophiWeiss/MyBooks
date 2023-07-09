@@ -1,4 +1,4 @@
-- finish homepage
+- homepage
   - static version
     - [x] html layout
     - [x] css styling
@@ -10,29 +10,34 @@
     - [x] fetch books
     - [x] persist selected book
   - [x] change themes switch
-    - [ ] option for default theme (triple theme switch (multiple themes?))
+    - [x] option for default theme (triple theme switch (multiple themes?))
   - [x] dots
+- chapter page
+  - [ ] main layout
+  - [ ] mini-header
+  - [ ] reading settings
+  - [ ] navigation menu
+  - [ ] "mark as read" circle:
+  - [ ] chapters menu:
+    - [ ] list scrolling
 - book page
-  - [ ] navigation between chapters
-  - [ ] save current chapter in local storage
-  - [ ] full screen (zen mode) support
-  - [ ] font size
-  - [ ] mini-header for book name and chapter
-  - [ ] commenting?
-  - [x] rewrite Card component to css module
-  - [x] rewrite md rendering with react-markdown
-- book content page
-  - [ ] name
-  - [ ] full description
-  - [ ] dates
-  - [ ] hashtags
-  - [ ] chapters
-- [x] Ukraine page
-- [x] About me section
-- all books page
-  - [x] masonry layout
-- [ ] navigation between pages (menu)
-- [ ] control panel
+  - [ ] main layout
+  - [ ] scroll custom behaviour
+  - [ ] chapter dyes when marked as read
+  - [ ] when hover chapters - can see hashtags
+  - [ ] reading settings
+  - [ ] main menu 
+- main menu
+  - [ ] animation from 3 lines to cross
+  - [ ] links
+  - [ ] hovered button dyes
+- reading settings
+  - [ ] animation: flower-spinjitzu
+  - [ ] theme switcher
+  - [ ] full-screen mode
+  - [ ] font-size-changer
+  - [ ] hovered button is dyed
+- [ ] bookmarks
 - [ ] mobile
 - [ ] blogs?
 - [ ] miniwiki for every book?
