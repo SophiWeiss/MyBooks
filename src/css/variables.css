@@ -1,34 +1,66 @@
 :root {
-    --color-green: #79d082;
-    --color-yellow: #efc664;
-    --color-red: #f85b78;
-    --color-background: white;
-    --color-accent: #8771ed;
-    --color-accent-muted: #cebfff;
-    --color-accent-faint: #e7e0ff;
-    --color-accent-dark: #4a3492;
-    --color-text-normal: #363341;
-    --color-text-muted: #7c7798;
-    --color-text-faint: #b0a8e0;
-    --color-text-blue: #7f74c5;
-    --shadow: 4px 4px 20px var(--color-accent-faint);
-    --shadow-active: 0 0 12px var(--color-accent-faint);
-    --shadow-hover: 4px 4px 30px var(--color-accent-faint);
-    --padding: 25px;
+    --color-feedback-done: #79d082;
+    --color-feedback-in-progress: #efc664;
+    --color-feedback-not-finished: #f85b78;
+
+    --color-background-accent: #8771ed;
+    --color-background-primary: #fff;
+    --color-background-secondary: #e7e0ff;
+
+    --color-text-accent: #8771ed;
+    --color-text-variant: #4a3492;
+    --color-text-primary: #363341;
+    --color-text-secondary: #7c7798;
+
+    --color-border-primary: #cebfff;
+    --color-border-secondary: #e7e0ff;
+
+    --color-icon-primary: #8771ed;
+
+    --space-s: 10px;
+    --space-m: 15px;
+    --space-l: 20px;
+    --space-xl: 25px;
+
+    --size-border-m: 3px;
+
+    --size-icon-s: 10px;
+    --size-icon-m: 20px;
+    --size-icon-l: 30px;
+    --size-icon-xl: 40px;
+    --size-icon-2xl: 50px;
+
+    --size-font-2xs: 11px;
+    --size-font-xs: 16px;
+    --size-font-s: 20px;
+    --size-font-m: 32px;
+    --size-font-l: 48px;
+    --size-font-xl: 64px;
+    --size-font-2xl: 80px;
+
+    --shadow: 4px 4px 20px #e7e0ff;
+    --shadow-active: 0 0 10px #e7e0ff;
+    --shadow-hover: 4px 4px 30px #e7e0ff;
 }
 
 [data-theme='dark'] {
-    --color-green: #94e79d;
-    --color-yellow: #f8d15b;
-    --color-background: #191a29;
-    --color-accent: #a867ff;
-    --color-accent-muted: #2b2e44;
-    --color-accent-faint: #24273a;
-    --color-accent-dark: #8452da;
-    --color-text-normal: #c5cff5;
-    --color-text-muted: #a1aacb;
-    --color-text-faint: #686c80;
-    --color-text-blue: #8e98d5;
+    --color-feedback-done: #94e79d;
+    --color-feedback-in-progress: #f8d15b;
+
+    --color-background-accent: #a867ff;
+    --color-background-primary: #191a29;
+    --color-background-secondary: #24273a;
+
+    --color-text-accent: #a867ff;
+    --color-text-variant: #8452da;
+    --color-text-primary: #c5cff5;
+    --color-text-secondary: #a1aacb;
+
+    --color-border-primary: #2b2e44;
+    --color-border-secondary: #24273a;
+
+    --color-icon-primary: #a867ff;
+
     --shadow: 4px 4px 15px #0002;
     --shadow-active: 0 0 6px #0001;
     --shadow-hover: 8px 8px 25px #0002;
