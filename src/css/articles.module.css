@@ -7,6 +7,7 @@
     color: var(--color-text-accent);
     font-size: var(--font-size-2xl);
     margin-bottom: var(--space-2xl);
+    word-break: break-word;
 }
 
 .article h2 {
