@@ -1,8 +1,19 @@
 .Ukraine {
-    --translate: 2px;
-    composes: button2 from 'src/css/buttons.module.css';
     display: block;
     flex-shrink: 0;
+    box-shadow: var(--shadow);
+    transition: translate .3s, box-shadow .3s;
+}
+
+.Ukraine:hover {
+    translate: 0 -4px;
+    box-shadow: var(--shadow-hover);
+}
+
+.Ukraine:active {
+    translate: 0;
+    box-shadow: var(--shadow-active);
+    transition: translate .15s, box-shadow .15s;
 }
 
 .UkraineBlue {

@@ -1,7 +1,7 @@
 .allBooks {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--space-l);
     max-width: 1200px;
     flex: 1;
 }
@@ -9,5 +9,7 @@
 .header {
     text-align: center;
     align-self: center;
-    color: var(--color-accent)
+    font-size: var(--font-size-2xl);
+    line-height: var(--font-line-height-s);
+    color: var(--color-text-accent);
 }

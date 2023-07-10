@@ -50,7 +50,7 @@ export default function BookCarousel({ books }) {
       <div className={style.books}>
         <Arrow left onClick={() => paginate(-1)} />
         {book === null ? (
-          <div className={style.bookCardEmpty} />
+          <BookCard />
         ) : (
           <AnimatePresence
             initial={false}

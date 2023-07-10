@@ -9,8 +9,8 @@ export default function Arrow({ right, left, onClick }) {
       className={style.arrow}
       onClick={onClick}
     >
-      {right && <BsChevronRight />}
-      {left && <BsChevronLeft />}
+      {right && <BsChevronRight size={30} />}
+      {left && <BsChevronLeft size={30} />}
     </button>
   )
 }

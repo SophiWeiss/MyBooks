@@ -1,11 +1,17 @@
 import '@/css/variables.css'
 import '@/css/global.css'
-import { Lora } from 'next/font/google'
 import Providers from './providers'
+import { Lora, Nunito } from 'next/font/google'
 
 const lora = Lora({
   subsets: ['cyrillic', 'latin'],
-  style: ['normal', 'italic']
+  style: ['normal', 'italic'],
+  variable: '--font-lora'
+})
+
+const nunito = Nunito({
+  subsets: ['cyrillic', 'latin'],
+  variable: '--font-nunito'
 })
 
 export const metadata = {
@@ -16,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={lora.className}>
+      <body className={`${lora.variable} ${nunito.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

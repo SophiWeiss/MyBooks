@@ -8,23 +8,18 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-height: 450px;
-    gap: 20px;
-}
-
-@media (max-width: 760px) {
-    .main {
-        max-height: unset;
-    }
+    max-height: 470px;
+    gap: var(--space-l);
 }
 
 .title {
     text-align: center;
+    font-size: var(--font-size-2xl);
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    gap: 25px;
+    gap: var(--space-l);
     align-items: flex-end;
 }

@@ -1,44 +1,48 @@
 .switch {
     --padding: 3px;
-    composes: cardBackground from 'src/css/card.module.css';
     display: flex;
-    border-radius: 999px;
-    padding: var(--padding);
+    border-radius: var(--size-border-radius-full);
     position: relative;
-    box-shadow: var(--shadow);
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-background-secondary);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    box-shadow: var(--shadow);
+    padding: var(--padding);
+    height: var(--size-icon-xl);
 }
 
 .switch button {
     display: flex;
-    padding: 8px;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
+    height: 100%;
+    aspect-ratio: 1;
 }
 
 .switch button svg {
-    color: var(--color-text-blue);
+    display: flex;
+    color: var(--color-icon-secondary-variant);
     transition: color .3s !important;
 }
 
 .switch button[data-selected='true'] svg {
-    color: var(--color-accent-faint);
+    color: var(--color-background-secondary);
 }
 
 .selected {
     position: absolute;
     height: calc(100% - 2 * var(--padding));
     aspect-ratio: 1;
-    background: var(--color-accent);
-    border-radius: 999px;
+    background: var(--color-icon-accent);
+    border-radius: var(--size-border-radius-full);
     z-index: 1;
     top: var(--padding);
     left: var(--padding);
     transition: translate .3s !important;
-}
-
-[data-theme='dark'] .selected {
-    background: var(--color-accent-dark);
 }
 
 .selected[data-theme='dark'] {

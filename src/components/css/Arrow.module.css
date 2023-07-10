@@ -1,5 +1,37 @@
 .arrow {
-    composes: button1 from 'src/css/buttons.module.css';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-icon-2xl);
+    aspect-ratio: 1;
+    border-radius: var(--size-border-radius-full);
+    flex-shrink: 0;
+    border: var(--size-border-m) solid transparent;
+    transition: translate .3s, background .3s, border .3s, box-shadow .3s;
+}
+
+.arrow:hover {
+    background: var(--color-background-secondary);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    box-shadow: var(--shadow);
+}
+
+.arrow:active {
+    box-shadow: var(--shadow-active);
+    translate: 0 4px;
+    transition: box-shadow .15s, translate .15s;
+}
+
+.arrow svg {
+    fill: var(--color-icon-secondary);
+    transition: fill .3s;
+}
+
+[data-theme='dark'] .arrow svg {
+}
+
+.arrow:hover svg {
+    fill: var(--color-icon-accent);
 }
 
 .arrow[data-right=true] svg {

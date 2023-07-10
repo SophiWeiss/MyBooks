@@ -1,24 +1,37 @@
-body .dots {
-    padding: 13px;
-}
-
 .dots {
-    gap: 5px;
-    composes: button1 from 'src/css/buttons.module.css';
+    display: flex;
+    gap: var(--space-xs);
+    padding: var(--space-m);
+    border-radius: var(--size-border-radius-full);
+    border: var(--size-border-m) solid transparent;
+    transition: translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
 .dot {
-    background: var(--color-accent-muted);
+    background: var(--color-icon-secondary);
     width: 6px;
-    height: 6px;
-    border-radius: 3px;
+    aspect-ratio: 1;
+    border-radius: var(--size-border-radius-full);
     transition: background-color .3s;
+    flex-shrink: 0;
+}
+
+.dots:hover {
+    background: var(--color-background-secondary);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    box-shadow: var(--shadow);
+}
+
+.dots:active {
+    box-shadow: var(--shadow-active);
+    translate: 0 4px;
+    transition: box-shadow .15s, translate .15s;
 }
 
 .dots:hover .dot {
-    background: var(--color-background);
+    background: var(--color-background-primary);
 }
 
 .dots .dot[data-selected=true] {
-    background: var(--color-accent-dark);
+    background: var(--color-icon-accent);
 }

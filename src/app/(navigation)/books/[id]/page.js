@@ -23,7 +23,7 @@ export default async function Book({ params }) {
   let { title } = await getBookData(id)
   return (
     <article className={style.article}>
-      <h1>{title}</h1>
+      <Markdown>{`# ${title}`}</Markdown>
       {chapters.map(({ content }, i) => (
         <Markdown key={i}>{content}</Markdown>
       ))}

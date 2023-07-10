@@ -1,26 +1,20 @@
 import style from './css/BookCard.module.css'
-import { Nunito } from 'next/font/google'
 import Link from 'next/link'
 import Markdown from './Markdown'
 
-const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
-
 export default function BookCard({ book, ...other }) {
-  return (
+  return book === undefined ? (
+    <div className={style.bookCardEmpty} />
+  ) : (
     <Link className={style.bookCard} href={`/books/${book.id}`} {...other}>
-      <div className={style.bookTitle}>
-        <h3>{book.title}</h3>
-        <div className={style.bookStatus}>
-          <div
-            className={style.bookStatusIndicator}
-            data-status={book.status}
-          />
-          <small className={[style.bookStatusText, nunito.className].join(' ')}>
-            {book.status}
-          </small>
+      <div className={style.flexRow}>
+        <h2 className={style.title}>{book.title}</h2>
+        <div className={style.status}>
+          <div className={style.statusIndicator} data-status={book.status} />
+          <small className={style.statusText}>{book.status}</small>
         </div>
       </div>
-      <Markdown>{book.content}</Markdown>
+      <Markdown className={style.description}>{book.content}</Markdown>
     </Link>
   )
 }
