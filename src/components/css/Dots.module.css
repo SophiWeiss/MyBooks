@@ -5,7 +5,7 @@
 }
 
 .dot {
-    background: var(--color-border-primary);
+    background: var(--color-icon-secondary);
     width: 6px;
     aspect-ratio: 1;
     border-radius: var(--size-border-radius-full);
