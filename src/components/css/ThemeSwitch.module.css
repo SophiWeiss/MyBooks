@@ -1,4 +1,5 @@
 .switch {
+    --padding: 3px;
     display: flex;
     border-radius: var(--size-border-radius-full);
     position: relative;
@@ -8,6 +9,7 @@
     background: var(--color-background-secondary);
     border: var(--size-border-m) solid var(--color-border-primary);
     box-shadow: var(--shadow);
+    padding: var(--padding);
     height: var(--size-icon-xl);
 }
 
@@ -23,7 +25,7 @@
 
 .switch button svg {
     display: flex;
-    color: var(--color-icon-primary);
+    color: var(--color-icon-secondary-variant);
     transition: color .3s !important;
 }
 
@@ -33,18 +35,14 @@
 
 .selected {
     position: absolute;
-    height: calc(100% - 2 * var(--size-border-m));
+    height: calc(100% - 2 * var(--padding));
     aspect-ratio: 1;
-    background: var(--color-background-accent);
+    background: var(--color-icon-accent);
     border-radius: var(--size-border-radius-full);
     z-index: 1;
-    top: var(--size-border-m);
-    left: var(--size-border-m);
+    top: var(--padding);
+    left: var(--padding);
     transition: translate .3s !important;
-}
-
-[data-theme='dark'] .selected {
-    background: var(--color-icon-primary);
 }
 
 .selected[data-theme='dark'] {
@@ -52,9 +50,9 @@
 }
 
 .selected[data-theme='system'] {
-    translate: calc(100% + 2 * var(--size-border-m)) 0;
+    translate: 100% 0;
 }
 
 .selected[data-theme='light'] {
-    translate: calc(200% + 4 * var(--size-border-m)) 0;
+    translate: 200% 0;
 }

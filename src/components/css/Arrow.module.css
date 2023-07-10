@@ -12,7 +12,7 @@
 }
 
 .arrow svg {
-    fill: var(--color-icon-primary);
+    fill: var(--color-icon-accent);
 }
 
 .arrow[data-right=true] svg {

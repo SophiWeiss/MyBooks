@@ -41,7 +41,7 @@
     font-weight: 500;
     left: calc(-1 * var(--space-xs));
     position: absolute;
-    color: var(--color-icon-secondary);
+    color: var(--color-text-tertiary);
 }
 
 .article blockquote {

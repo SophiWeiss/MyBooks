@@ -13,5 +13,5 @@
 }
 
 .dots .dot[data-selected=true] {
-    background: var(--color-background-accent);
+    background: var(--color-icon-accent);
 }
