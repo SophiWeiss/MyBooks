@@ -3,5 +3,33 @@
     top: var(--space-l);
     z-index: 2;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
+
+.linkElement {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-l);
+    width: max-content;
+    height: var(--size-icon-2xl);
+    font-weight: bold;
+    color: var(--color-text-accent);
+    background: var(--color-background-secondary);
+    border-radius: var(--size-border-radius-full);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    box-shadow: var(--shadow);
+    transition: translate .3s, box-shadow .3s;
+}
+
+.linkElement:hover {
+    text-decoration: none;
+    translate: 0 -4px;
+    box-shadow: var(--shadow-hover);
+}
+
+.linkElement:active {
+    translate: 0;
+    box-shadow: var(--shadow-active);
+    transition: translate .15s, box-shadow .15s;
+}
+

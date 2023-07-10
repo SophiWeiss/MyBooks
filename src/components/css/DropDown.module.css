@@ -1,0 +1,47 @@
+.dropDown {
+    display: flex;
+    position: relative;
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    position: absolute;
+    left: calc(100% + var(--space-l));
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--size-icon-2xl);
+    aspect-ratio: 1;
+    color: var(--color-icon-accent);
+    background: var(--color-background-primary);
+    border-radius: var(--size-border-radius-full);
+    border: var(--size-border-m) solid var(--color-border-secondary);
+    transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
+}
+
+.button[data-is-open='true'] {
+    color: var(--color-icon-accent-variant);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    background: var(--color-background-secondary);
+    box-shadow: var(--shadow);
+}
+
+.button:hover {
+    color: var(--color-icon-accent-variant);
+    background: var(--color-background-secondary);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    box-shadow: var(--shadow);
+}
+
+.button:active {
+    box-shadow: var(--shadow-active);
+    translate: 0 4px;
+    transition: box-shadow .15s, translate .15s;
+}
+
+
