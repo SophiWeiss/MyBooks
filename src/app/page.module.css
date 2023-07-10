@@ -12,12 +12,6 @@
     gap: var(--space-l);
 }
 
-@media (max-width: 760px) {
-    .main {
-        max-height: unset;
-    }
-}
-
 .title {
     text-align: center;
     font-size: var(--font-size-2xl);
