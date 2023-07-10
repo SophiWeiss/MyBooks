@@ -10,7 +10,7 @@
     border: var(--size-border-m) solid var(--color-border-primary);
     box-shadow: var(--shadow);
     padding: var(--padding);
-    height: var(--size-icon-xl);
+    height: var(--size-icon-2xl);
 }
 
 .switch button {

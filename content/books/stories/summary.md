@@ -1,7 +1,7 @@
 ---
 title: Збірка оповідань
-createdAt: 05-2023
-updatedAt: 29-06-2023
+createdAt: 2023-05
+updatedAt: 2023-06-29
 status: In Progress
 index: 3
 ---

@@ -10,6 +10,5 @@
     text-align: center;
     align-self: center;
     font-size: var(--font-size-2xl);
-    line-height: var(--font-line-height-s);
     color: var(--color-text-accent);
 }
