@@ -3,5 +3,5 @@
     top: var(--space-l);
     z-index: 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }

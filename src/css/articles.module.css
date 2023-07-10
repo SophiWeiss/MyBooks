@@ -1,45 +1,44 @@
-.markdown {
+.article {
     max-width: var(--size-article-max-width);
 }
 
-.markdown h1 {
+.article h1 {
     text-align: center;
     color: var(--color-text-accent);
     font-size: var(--font-size-2xl);
 }
 
-.markdown p, .markdown ul, .markdown blockquote {
+.article p, .article ul, .article blockquote {
     font-size: var(--font-size-s);
-    line-height: var(--font-line-height-l);
 }
 
-.markdown h2 {
+.article h2 {
     font-size: var(--font-size-l);
 }
 
-.markdown h1, .markdown h2, .markdown h3 {
-    line-height: var(--font-line-height-s);
-}
-
-.markdown p, .markdown h2, .markdown h3, .markdown ul, .markdown blockquote, .markdown ul li:has(p) {
+.article p, .article h2, .article h3, .article ul, .article blockquote, .article ul li:has(p) {
     margin: var(--space-l) 0;
 }
 
-.markdown ul p {
+.article h1, .article h2, .article h3 {
+    margin-top: var(--space-2xl);
+}
+
+.article ul p {
     margin: 0;
 }
 
-.markdown ul {
+.article ul {
     list-style: none;
     margin-left: var(--space-l);
 }
 
-.markdown li {
+.article li {
     position: relative;
     padding-left: var(--space-l);
 }
 
-.markdown li::before {
+.article li::before {
     content: "—";
     top: 0;
     font-weight: 500;
@@ -48,16 +47,16 @@
     color: var(--color-icon-secondary);
 }
 
-.markdown blockquote {
+.article blockquote {
     position: relative;
 }
 
-.markdown blockquote p {
+.article blockquote p {
     padding: var(--space-l) var(--space-xl) var(--space-l) var(--space-2xl);
     color: var(--color-text-secondary-variant);
 }
 
-.markdown blockquote::before {
+.article blockquote::before {
     content: "";
     width: var(--size-border-l);
     position: absolute;

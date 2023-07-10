@@ -8,6 +8,10 @@
     color: var(--color-text-secondary);
 }
 
+[data-theme='dark'] .licenceText a {
+    color: var(--color-text-accent-variant);
+}
+
 .licenseImage {
     position: relative;
     height: 25px;

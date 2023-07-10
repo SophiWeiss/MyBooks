@@ -1,4 +1,18 @@
 .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size-icon-2xl);
+    aspect-ratio: 1;
+    background: var(--color-background-secondary);
+    border: var(--size-border-m) solid var(--color-border-primary);
+    border-radius: var(--size-border-radius-full);
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+}
+
+.arrow svg {
+    fill: var(--color-icon-primary);
 }
 
 .arrow[data-right=true] svg {

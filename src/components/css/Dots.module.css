@@ -1,9 +1,7 @@
-body .dots {
-    padding: var(--space-m);
-}
-
 .dots {
+    display: flex;
     gap: var(--space-xs);
+    padding: var(--space-m);
 }
 
 .dot {
@@ -12,10 +10,6 @@ body .dots {
     aspect-ratio: 1;
     border-radius: var(--size-border-radius-full);
     transition: background-color .3s;
-}
-
-.dots:hover .dot {
-    background: var(--color-background-primary);
 }
 
 .dots .dot[data-selected=true] {
