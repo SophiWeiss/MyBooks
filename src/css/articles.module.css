@@ -8,7 +8,7 @@
     font-size: var(--font-size-2xl);
 }
 
-.article p, .article ul, .article blockquote {
+.article :is(p, ul, blockquote) {
     font-size: var(--font-size-s);
 }
 
@@ -16,16 +16,13 @@
     font-size: var(--font-size-l);
 }
 
-.article p, .article h2, .article h3, .article ul, .article blockquote, .article ul li:has(p) {
-    margin: var(--space-l) 0;
+.article :is(p, ul, blockquote, li:has(p)) {
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
 }
 
-.article h1, .article h2, .article h3 {
-    margin-top: var(--space-2xl);
-}
-
-.article ul p {
-    margin: 0;
+.article :is(h1, h2, h3) {
+    margin-top: var(--space-3xl);
 }
 
 .article ul {
@@ -42,7 +39,7 @@
     content: "—";
     top: 0;
     font-weight: 500;
-    left: calc(-1 * var(--space-xs));;
+    left: calc(-1 * var(--space-xs));
     position: absolute;
     color: var(--color-icon-secondary);
 }
@@ -65,4 +62,11 @@
     height: calc(100% - 2 * var(--space-xs));
     background: var(--color-background-accent);
     border-radius: var(--size-border-radius-full);
+}
+
+.article hr {
+    border-width: var(--size-border-m);
+    border-style: solid;
+    border-radius: var(--size-border-radius-full);
+    color: var(--color-border-primary);
 }

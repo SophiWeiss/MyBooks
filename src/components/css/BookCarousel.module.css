@@ -6,8 +6,3 @@
     max-width: 650px;
     gap: var(--space-l);
 }
-
-.bookCardEmpty {
-    width: 400px;
-    height: 200px;
-}

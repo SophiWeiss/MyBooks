@@ -3,7 +3,9 @@ import Link from 'next/link'
 import Markdown from './Markdown'
 
 export default function BookCard({ book, ...other }) {
-  return (
+  return book === undefined ? (
+    <div className={style.bookCardEmpty} />
+  ) : (
     <Link className={style.bookCard} href={`/books/${book.id}`} {...other}>
       <div className={style.flexRow}>
         <h2 className={style.title}>{book.title}</h2>
