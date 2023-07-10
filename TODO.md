@@ -29,8 +29,8 @@
   - [ ] main menu 
 - main menu
   - [ ] animation from 3 lines to cross
-  - [ ] links
-  - [ ] hovered button dyes
+  - [x] links
+  - [x] hovered button dyes
 - reading settings
   - [ ] animation: flower-spinjitzu
   - [ ] theme switcher
