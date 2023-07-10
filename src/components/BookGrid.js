@@ -14,7 +14,7 @@ export default function BookGrid({ books }) {
 
   return (
     mounted && (
-      <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 1000: 2, 1300: 3 }}>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 800: 2, 1200: 3 }}>
         <Masonry gutter={'20px'}>{bookElements}</Masonry>
       </ResponsiveMasonry>
     )
