@@ -1,6 +1,4 @@
 .Ukraine {
-    --translate: 2px;
-    composes: button2 from 'src/css/buttons.module.css';
     display: block;
     flex-shrink: 0;
 }

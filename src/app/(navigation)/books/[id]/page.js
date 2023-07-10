@@ -1,4 +1,3 @@
-import style from '@/css/articles.module.css'
 import { getBookContent, getBookData, getSortedBooksData } from '@/lib/books'
 import Markdown from '@/components/Markdown'
 
@@ -22,8 +21,8 @@ export default async function Book({ params }) {
   let chapters = await getBookContent(id)
   let { title } = await getBookData(id)
   return (
-    <article className={style.article}>
-      <h1>{title}</h1>
+    <article>
+      <Markdown>{`# ${title}`}</Markdown>
       {chapters.map(({ content }, i) => (
         <Markdown key={i}>{content}</Markdown>
       ))}

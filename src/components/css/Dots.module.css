@@ -1,24 +1,23 @@
 body .dots {
-    padding: 13px;
+    padding: var(--space-m);
 }
 
 .dots {
-    gap: 5px;
-    composes: button1 from 'src/css/buttons.module.css';
+    gap: var(--space-xs);
 }
 
 .dot {
-    background: var(--color-accent-muted);
+    background: var(--color-border-primary);
     width: 6px;
-    height: 6px;
-    border-radius: 3px;
+    aspect-ratio: 1;
+    border-radius: var(--size-border-radius-full);
     transition: background-color .3s;
 }
 
 .dots:hover .dot {
-    background: var(--color-background);
+    background: var(--color-background-primary);
 }
 
 .dots .dot[data-selected=true] {
-    background: var(--color-accent-dark);
+    background: var(--color-background-accent);
 }

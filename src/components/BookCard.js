@@ -1,9 +1,6 @@
 import style from './css/BookCard.module.css'
-import { Nunito } from 'next/font/google'
 import Link from 'next/link'
 import Markdown from './Markdown'
-
-const nunito = Nunito({ subsets: ['cyrillic', 'latin'] })
 
 export default function BookCard({ book, ...other }) {
   return (
@@ -15,9 +12,7 @@ export default function BookCard({ book, ...other }) {
             className={style.bookStatusIndicator}
             data-status={book.status}
           />
-          <small className={[style.bookStatusText, nunito.className].join(' ')}>
-            {book.status}
-          </small>
+          <small className={style.bookStatusText}>{book.status}</small>
         </div>
       </div>
       <Markdown>{book.content}</Markdown>

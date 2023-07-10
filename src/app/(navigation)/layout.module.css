@@ -1,6 +1,6 @@
 .nav {
     position: sticky;
-    top: var(--padding);
+    top: var(--space-l);
     z-index: 2;
     display: flex;
     justify-content: space-between;

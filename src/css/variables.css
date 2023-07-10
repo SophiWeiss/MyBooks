@@ -8,21 +8,26 @@
     --color-background-secondary: #e7e0ff;
 
     --color-text-accent: #8771ed;
-    --color-text-variant: #4a3492;
+    --color-text-accent-variant: #4a3492;
     --color-text-primary: #363341;
     --color-text-secondary: #7c7798;
+    --color-text-secondary-variant: #7f74c5;
 
     --color-border-primary: #cebfff;
     --color-border-secondary: #e7e0ff;
 
     --color-icon-primary: #8771ed;
+    --color-icon-secondary: #cebfff;
 
+    --space-xs: 5px;
     --space-s: 10px;
     --space-m: 15px;
     --space-l: 20px;
     --space-xl: 25px;
+    --space-2xl: 40px;
 
     --size-border-m: 3px;
+    --size-border-l: 4px;
 
     --size-icon-s: 10px;
     --size-icon-m: 20px;
@@ -30,17 +35,28 @@
     --size-icon-xl: 40px;
     --size-icon-2xl: 50px;
 
-    --size-font-2xs: 11px;
-    --size-font-xs: 16px;
-    --size-font-s: 20px;
-    --size-font-m: 32px;
-    --size-font-l: 48px;
-    --size-font-xl: 64px;
-    --size-font-2xl: 80px;
+    --size-article-max-width: 65ch;
+
+    --size-border-radius-m: 20px;
+    --size-border-radius-full: 999px;
+
+    --font-size-2xs: 12px;
+    --font-size-xs: 16px;
+    --font-size-s: 20px;
+    --font-size-m: 32px;
+    --font-size-l: 48px;
+    --font-size-xl: 64px;
+    --font-size-2xl: 80px;
+
+    --font-line-height-s: 1.2;
+    --font-line-height-l: 1.5;
 
     --shadow: 4px 4px 20px #e7e0ff;
     --shadow-active: 0 0 10px #e7e0ff;
     --shadow-hover: 4px 4px 30px #e7e0ff;
+
+    --font-lora: unset;
+    --font-nunito: unset;
 }
 
 [data-theme='dark'] {
@@ -52,14 +68,16 @@
     --color-background-secondary: #24273a;
 
     --color-text-accent: #a867ff;
-    --color-text-variant: #8452da;
+    --color-text-accent-variant: #8452da;
     --color-text-primary: #c5cff5;
     --color-text-secondary: #a1aacb;
+    --color-text-secondary-variant: #8e98d5;
 
     --color-border-primary: #2b2e44;
     --color-border-secondary: #24273a;
 
     --color-icon-primary: #a867ff;
+    --color-icon-secondary: #56608f;
 
     --shadow: 4px 4px 15px #0002;
     --shadow-active: 0 0 6px #0001;

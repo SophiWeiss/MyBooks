@@ -1,44 +1,44 @@
 .switch {
-    --padding: 3px;
-    composes: cardBackground from 'src/css/card.module.css';
     display: flex;
-    border-radius: 999px;
-    padding: var(--padding);
+    border-radius: var(--size-border-radius-full);
     position: relative;
-    box-shadow: var(--shadow);
     cursor: pointer;
 }
 
 .switch button {
     display: flex;
-    padding: 8px;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
+    width: var(--size-icon-xl);
+    aspect-ratio: 1;
 }
 
 .switch button svg {
-    color: var(--color-text-blue);
+    display: flex;
+    color: var(--color-icon-primary);
     transition: color .3s !important;
 }
 
 .switch button[data-selected='true'] svg {
-    color: var(--color-accent-faint);
+    color: var(--color-background-primary);
 }
 
 .selected {
     position: absolute;
-    height: calc(100% - 2 * var(--padding));
+    height: calc(100% - 2 * var(--space-xs));
     aspect-ratio: 1;
-    background: var(--color-accent);
-    border-radius: 999px;
+    background: var(--color-background-accent);
+    border-radius: var(--size-border-radius-full);
     z-index: 1;
-    top: var(--padding);
-    left: var(--padding);
+    top: var(--space-xs);
+    left: var(--space-xs);
     transition: translate .3s !important;
 }
 
 [data-theme='dark'] .selected {
-    background: var(--color-accent-dark);
+    background: var(--color-icon-primary);
 }
 
 .selected[data-theme='dark'] {
@@ -46,9 +46,9 @@
 }
 
 .selected[data-theme='system'] {
-    translate: 100% 0;
+    translate: calc(100% + 2 * var(--space-xs)) 0;
 }
 
 .selected[data-theme='light'] {
-    translate: 200% 0;
+    translate: calc(200% + 4 * var(--space-xs)) 0;
 }

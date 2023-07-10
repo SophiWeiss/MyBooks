@@ -7,9 +7,15 @@
 }
 
 .notFound h1 {
-    color: var(--color-accent);
+    color: var(--color-text-accent);
+    font-size: var(--font-size-2xl);
+}
+
+.notFound p {
+    font-size: var(--font-size-s);
 }
 
 .notFound small {
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-2xs);
 }

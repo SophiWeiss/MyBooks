@@ -1,40 +1,40 @@
 .bookCard {
-    composes: card from 'src/css/card.module.css';
 }
 
 .bookTitle {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: var(--space-l);
 }
 
 .bookStatus {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: var(--space-xs);
     white-space: nowrap;
 }
 
 .bookStatusText {
     font-weight: bold;
-    color: var(--color-accent);
+    font-family: var(--font-nunito);
+    color: var(--color-text-accent);
 }
 
 .bookStatusIndicator {
     width: 6px;
-    height: 6px;
-    border-radius: 3px;
+    aspect-ratio: 1;
+    border-radius: var(--size-border-radius-full);
 }
 
 .bookStatusIndicator[data-status="Done"] {
-    background: var(--color-green);
+    background: var(--color-feedback-done);
 }
 
 .bookStatusIndicator[data-status="In Progress"] {
-    background: var(--color-yellow);
+    background: var(--color-feedback-in-progress);
 }
 
 .bookStatusIndicator[data-status="Not Finished"] {
-    background: var(--color-red);
+    background: var(--color-feedback-not-finished);
 }

@@ -1,15 +1,11 @@
 .license {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-end;
+    gap: var(--space-m);
 }
 
 .licenceText {
-    color: var(--color-text-muted);
-}
-
-[data-theme='dark'] .licenceText a {
-    color: var(--color-accent-dark);
+    color: var(--color-text-secondary);
 }
 
 .licenseImage {
