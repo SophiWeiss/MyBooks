@@ -7,10 +7,10 @@ export const metadata = {
 }
 
 export default async function Ukraine() {
-  const { content } = await readMd('ukraine.md')
+  const { content, title } = await readMd('ukraine.md')
   return (
     <article className={style.article}>
-      <Markdown>{content}</Markdown>
+      <Markdown>{`# ${title}\n${content}`}</Markdown>
     </article>
   )
 }

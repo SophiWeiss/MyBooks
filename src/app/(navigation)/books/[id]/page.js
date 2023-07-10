@@ -24,7 +24,9 @@ export default async function Book({ params }) {
   return (
     <article className={style.article}>
       <Markdown>
-        {`# ${title}\n${chapters.map(chapter => chapter.content).join('\n')}`}
+        {`# ${title}\n${chapters
+          .map(chapter => `## ${chapter.title}\n${chapter.content}`)
+          .join('\n')}`}
       </Markdown>
     </article>
   )
