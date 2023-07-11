@@ -25,29 +25,41 @@ export default function DropDown({ icon, children }) {
   useEffect(() => setIsOpen(false), [pathName])
 
   return (
-    <div className={style.dropDown}>
-      <button
-        data-is-open={isOpen}
-        className={style.button}
-        onClick={() => setIsOpen(x => !x)}
-      >
-        {icon}
-      </button>
+    <>
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            variants={variants}
-            initial={'initial'}
-            animate={'visible'}
-            className={style.elements}
-            exit={'exit'}
-          >
-            {React.Children.map(children, child => (
-              <motion.div variants={elementVariants}>{child}</motion.div>
-            ))}
-          </motion.div>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            exit={{ opacity: 0 }}
+            className={style.overlay}
+          />
         )}
       </AnimatePresence>
-    </div>
+      <div className={style.dropDown}>
+        <button
+          data-is-open={isOpen}
+          className={style.button}
+          onClick={() => setIsOpen(x => !x)}
+        >
+          {icon}
+        </button>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              variants={variants}
+              initial={'initial'}
+              animate={'visible'}
+              className={style.elements}
+              exit={'exit'}
+            >
+              {React.Children.map(children, child => (
+                <motion.div variants={elementVariants}>{child}</motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </>
   )
 }

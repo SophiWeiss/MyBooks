@@ -39,3 +39,12 @@
     translate: 0 4px;
     transition: box-shadow .15s, translate .15s;
 }
+
+.overlay {
+    position: absolute;
+    top: calc(-1 * var(--space-l));
+    left: calc(-1 * var(--space-l));
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-background-primary);
+}
