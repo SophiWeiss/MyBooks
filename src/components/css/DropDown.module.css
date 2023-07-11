@@ -8,7 +8,7 @@
     flex-direction: column;
     gap: var(--space-l);
     position: absolute;
-    left: calc(100% + var(--space-l));
+    top: calc(100% + var(--space-l));
 }
 
 .button {
@@ -24,18 +24,14 @@
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.button[data-is-open='true'] {
-    color: var(--color-icon-accent-variant);
+.button[data-is-open='true'], .button:hover  {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
 }
 
-.button:hover {
+[data-theme='dark'] :is(.button[data-is-open='true'], .button:hover) {
     color: var(--color-icon-accent-variant);
-    background: var(--color-background-secondary);
-    border: var(--size-border-m) solid var(--color-border-primary);
-    box-shadow: var(--shadow);
 }
 
 .button:active {
@@ -43,5 +39,3 @@
     translate: 0 4px;
     transition: box-shadow .15s, translate .15s;
 }
-
-
