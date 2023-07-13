@@ -16,11 +16,11 @@ export default function SideMenu({ icon, side, children }) {
     exit: { transition: { staggerChildren: 0.07 } }
   }
 
-  const translateX = side === 'left' ? -50 : 50
+  const translateX = side === 'left' ? -100 : 100
   const elementVariants = {
-    visible: { opacity: 1, x: 0 },
-    initial: { opacity: 0, x: translateX },
-    exit: { opacity: 0, x: translateX }
+    visible: { opacity: 1, x: 0, scale: 1 },
+    initial: { opacity: 0, x: translateX, scale: 0.2 },
+    exit: { opacity: 0, x: translateX, scale: 0.2 }
   }
 
   useEffect(() => setIsOpen(false), [pathName])
