@@ -1,6 +1,11 @@
 .dropDown {
     display: flex;
     position: relative;
+    z-index: 2;
+}
+
+.dropDown[data-is-open='true'] {
+    z-index: 4;
 }
 
 .elements {
@@ -24,13 +29,13 @@
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.button[data-is-open='true'], .button:hover  {
+.dropDown[data-is-open='true'] .button, .button:hover  {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
 }
 
-[data-theme='dark'] :is(.button[data-is-open='true'], .button:hover) {
+[data-theme='dark'] :is(.dropDown[data-is-open='true'] .button, .button:hover) {
     color: var(--color-icon-accent-variant);
 }
 
@@ -47,4 +52,5 @@
     width: 100vw;
     height: 100vh;
     background: var(--color-background-primary);
+    z-index: 3;
 }

@@ -33,16 +33,13 @@ export default function SideMenu({ icon, side, children }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
             className={style.overlay}
           />
         )}
       </AnimatePresence>
-      <div className={style.dropDown}>
-        <button
-          data-is-open={isOpen}
-          className={style.button}
-          onClick={() => setIsOpen(x => !x)}
-        >
+      <div className={style.dropDown} data-is-open={isOpen}>
+        <button className={style.button} onClick={() => setIsOpen(x => !x)}>
           {icon}
         </button>
         <AnimatePresence>
