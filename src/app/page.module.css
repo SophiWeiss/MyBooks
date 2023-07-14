@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+.title {
+    composes: title from 'src/css/common.module.css';
+    color: var(--color-text-primary);
+}
+
 .footer {
     display: flex;
     width: 100%;
