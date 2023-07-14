@@ -36,7 +36,7 @@ export default function Navigation({ children }) {
           <ThemeSwitch />
         </SideMenu>
       </nav>
-      <main>{children}</main>
+      {children}
     </>
   )
 }

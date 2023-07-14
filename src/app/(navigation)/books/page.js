@@ -10,9 +10,9 @@ export default async function AllBooks() {
   const books = await getSortedBooksData()
 
   return (
-    <div className={style.allBooks}>
+    <main className={style.allBooks}>
       <h1 className={style.header}>All Books</h1>
       <BookGrid books={books} />
-    </div>
+    </main>
   )
 }

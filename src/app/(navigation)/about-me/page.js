@@ -9,8 +9,10 @@ export const metadata = {
 export default async function AboutMe() {
   const { content, title } = await readMd('about-me.md')
   return (
-    <article className={style.article}>
-      <Markdown>{`# ${title}\n${content}`}</Markdown>
-    </article>
+    <main>
+      <article className={style.article}>
+        <Markdown>{`# ${title}\n${content}`}</Markdown>
+      </article>
+    </main>
   )
 }
