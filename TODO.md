@@ -12,31 +12,30 @@
   - [x] change themes switch
     - [x] option for default theme (triple theme switch (multiple themes?))
   - [x] dots
+- update book card
+  - [ ] progress bar
+  - [ ] full description
 - chapter page
   - [ ] main layout
   - [ ] mini-header
   - [ ] reading settings
-  - [ ] navigation menu
-  - [ ] "mark as read" circle:
-  - [ ] chapters menu:
-    - [ ] list scrolling
-- book page
-  - [ ] main layout
-  - [ ] scroll custom behaviour
-  - [ ] chapter dyes when marked as read
-  - [ ] when hover chapters - can see hashtags
-  - [ ] reading settings
-  - [ ] main menu 
-- main menu
-  - [ ] animation from 3 lines to cross
+  - [ ] "mark as read" circle
+  - [ ] next/prev chapter buttons
+- [x] book page
+- side menu
+  - [ ] scrolling
+  - [ ] animation for button
   - [x] links
   - [x] hovered button dyes
 - reading settings
-  - [ ] animation: flower-spinjitzu
-  - [ ] theme switcher
+  - [x] theme switcher
   - [ ] full-screen mode
   - [ ] font-size-changer
-  - [ ] hovered button is dyed
+  - [x] hovered button is dyed
+- tags 
+  - [ ] book page
+  - [ ] chapter page
+- [ ] rewrite markdown support with mdx
 - [ ] bookmarks
 - [ ] mobile
 - [ ] blogs?

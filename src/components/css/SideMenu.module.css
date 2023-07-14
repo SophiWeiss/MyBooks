@@ -1,14 +1,40 @@
 .dropDown {
     display: flex;
-    position: relative;
+    position: fixed;
+    gap: var(--space-l);
+    z-index: 2;
+    transition: z-index 0s ease .3s;
 }
 
-.elements {
+.dropDown[data-top='true'] {
+    top: var(--space-l);
+    flex-direction: column;
+}
+
+.dropDown[data-bottom='true'] {
+    bottom: var(--space-l);
+    flex-direction: column-reverse;
+}
+
+.dropDown[data-left='true'] {
+    left: var(--space-l);
+    align-items: start;
+}
+
+.dropDown[data-right='true'] {
+    right: var(--space-l);
+    align-items: end;
+}
+
+.dropDown[data-is-open='true'] {
+    z-index: 4;
+    transition: z-index 0s ease 0s;
+}
+
+.items {
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
-    position: absolute;
-    top: calc(100% + var(--space-l));
 }
 
 .button {
@@ -24,13 +50,13 @@
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.button[data-is-open='true'], .button:hover  {
+.dropDown[data-is-open='true'] .button, .button:hover  {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
 }
 
-[data-theme='dark'] :is(.button[data-is-open='true'], .button:hover) {
+[data-theme='dark'] :is(.dropDown[data-is-open='true'] .button, .button:hover) {
     color: var(--color-icon-accent-variant);
 }
 
@@ -41,10 +67,8 @@
 }
 
 .overlay {
-    position: absolute;
-    top: calc(-1 * var(--space-l));
-    left: calc(-1 * var(--space-l));
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
+    inset: 0;
     background: var(--color-background-primary);
+    z-index: 3;
 }

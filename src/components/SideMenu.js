@@ -6,17 +6,18 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 
-export default function SideMenu({ icon, side, children }) {
+export default function SideMenu({ icon, top, bottom, left, right, children }) {
   const [isOpen, setIsOpen] = useState(false)
   const pathName = usePathname()
 
+  const staggerDirection = left ? 1 : -1
   const variants = {
-    initial: { transition: { staggerChildren: 0.07 } },
-    visible: { transition: { staggerChildren: 0.07 } },
-    exit: { transition: { staggerChildren: 0.07 } }
+    initial: { transition: { staggerChildren: 0.07, staggerDirection } },
+    visible: { transition: { staggerChildren: 0.07, staggerDirection } },
+    exit: { transition: { staggerChildren: 0.07, staggerDirection } }
   }
 
-  const translateX = side === 'left' ? -100 : 100
+  const translateX = left ? -100 : 100
   const elementVariants = {
     visible: { opacity: 1, x: 0, scale: 1 },
     initial: { opacity: 0, x: translateX, scale: 0.2 },
@@ -33,16 +34,20 @@ export default function SideMenu({ icon, side, children }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
             className={style.overlay}
           />
         )}
       </AnimatePresence>
-      <div className={style.dropDown}>
-        <button
-          data-is-open={isOpen}
-          className={style.button}
-          onClick={() => setIsOpen(x => !x)}
-        >
+      <div
+        className={style.dropDown}
+        data-left={left}
+        data-right={right}
+        data-top={top}
+        data-bottom={bottom}
+        data-is-open={isOpen}
+      >
+        <button className={style.button} onClick={() => setIsOpen(x => !x)}>
           {icon}
         </button>
         <AnimatePresence>
@@ -52,11 +57,15 @@ export default function SideMenu({ icon, side, children }) {
               initial={'initial'}
               animate={'visible'}
               exit={'exit'}
-              className={style.elements}
-              style={side === 'right' && { alignItems: 'flex-end', right: 0 }}
+              className={style.items}
             >
               {Children.map(children, child => (
-                <motion.div variants={elementVariants}>{child}</motion.div>
+                <motion.div
+                  variants={elementVariants}
+                  style={{ width: 'max-content' }}
+                >
+                  {child}
+                </motion.div>
               ))}
             </motion.div>
           )}

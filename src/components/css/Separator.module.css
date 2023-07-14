@@ -1,0 +1,15 @@
+.separator {
+    background: var(--color-background-secondary);
+    border-radius: var(--size-border-radius-full);
+    align-self: center;
+}
+
+.separator[data-horizontal='true'] {
+    width: 100%;
+    height: var(--size-border-m);
+}
+
+.separator[data-vertical='true'] {
+    height: 100%;
+    width: var(--size-border-m);
+}
