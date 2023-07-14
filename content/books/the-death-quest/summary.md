@@ -1,7 +1,7 @@
 ---
 title: Смертельный квест
-createdAt: 2016-10
-updatedAt: 2021
+createdAt: 2016-10-00
+updatedAt: 2021-00-00
 status: Done
 index: 2
 tags: [fantasy, teengroup, friendship, revenge, rituals]
