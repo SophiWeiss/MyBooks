@@ -1,4 +1,5 @@
-import style from '@/css/articles.module.css'
+import commonStyle from '@/css/common.module.css'
+import articleStyle from '@/css/articles.module.css'
 import { readMd } from '@/lib/markdown'
 import Markdown from '@/components/Markdown'
 
@@ -9,8 +10,10 @@ export const metadata = {
 export default async function Ukraine() {
   const { content, title } = await readMd('ukraine.md')
   return (
-    <article className={style.article}>
-      <Markdown>{`# ${title}\n${content}`}</Markdown>
-    </article>
+    <main className={commonStyle.main}>
+      <article className={articleStyle.article}>
+        <Markdown>{`# ${title}\n${content}`}</Markdown>
+      </article>
+    </main>
   )
 }

@@ -1,14 +1,9 @@
 .notFound {
-    display: flex;
-    flex-direction: column;
+    composes: main from 'src/css/common.module.css';
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.notFound h1 {
-    color: var(--color-text-accent);
-    font-size: var(--font-size-2xl);
+    gap: 0;
 }
 
 .notFound p {

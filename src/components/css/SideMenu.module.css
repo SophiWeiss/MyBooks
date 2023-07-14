@@ -1,14 +1,40 @@
 .dropDown {
     display: flex;
-    position: relative;
+    position: fixed;
+    gap: var(--space-l);
+    z-index: 2;
+    transition: z-index 0s ease .3s;
 }
 
-.elements {
+.dropDown[data-top='true'] {
+    top: var(--space-l);
+    flex-direction: column;
+}
+
+.dropDown[data-bottom='true'] {
+    bottom: var(--space-l);
+    flex-direction: column-reverse;
+}
+
+.dropDown[data-left='true'] {
+    left: var(--space-l);
+    align-items: start;
+}
+
+.dropDown[data-right='true'] {
+    right: var(--space-l);
+    align-items: end;
+}
+
+.dropDown[data-is-open='true'] {
+    z-index: 4;
+    transition: z-index 0s ease 0s;
+}
+
+.items {
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
-    position: absolute;
-    left: calc(100% + var(--space-l));
 }
 
 .button {
@@ -24,18 +50,14 @@
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.button[data-is-open='true'] {
-    color: var(--color-icon-accent-variant);
+.dropDown[data-is-open='true'] .button, .button:hover  {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
 }
 
-.button:hover {
+[data-theme='dark'] :is(.dropDown[data-is-open='true'] .button, .button:hover) {
     color: var(--color-icon-accent-variant);
-    background: var(--color-background-secondary);
-    border: var(--size-border-m) solid var(--color-border-primary);
-    box-shadow: var(--shadow);
 }
 
 .button:active {
@@ -44,4 +66,9 @@
     transition: box-shadow .15s, translate .15s;
 }
 
-
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--color-background-primary);
+    z-index: 3;
+}

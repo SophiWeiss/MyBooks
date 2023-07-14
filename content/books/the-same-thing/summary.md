@@ -4,6 +4,7 @@ createdAt: 2023-06-11
 updatedAt: 2023-06-20
 status: In Progress
 index: 0
+tags: [dystopia, fantasy, time, changes]
 ---
 
 Среда, 7 утра. Обычный день для жителей города, которые уже полтора века не живут реальностю. Как далеко может завести

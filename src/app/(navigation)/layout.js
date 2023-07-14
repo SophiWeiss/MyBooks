@@ -1,11 +1,18 @@
+'use client'
+
 import style from './layout.module.css'
 import Link from 'next/link'
 import { HiMenuAlt2 } from 'react-icons/hi'
+import { IoSettings } from 'react-icons/io5'
+import { useSelectedLayoutSegments } from 'next/navigation'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import Ukraine from '@/components/Ukraine'
-import DropDown from '@/components/DropDown'
+import SideMenu from '@/components/SideMenu'
 
 export default function Navigation({ children }) {
+  const segment = useSelectedLayoutSegments()
+  const isBookChapterSegment = (segment[0] = 'books' && segment.length === 3)
+
   const links = [
     { href: '/', component: 'Home' },
     { href: '/books', component: 'Books' },
@@ -21,17 +28,13 @@ export default function Navigation({ children }) {
 
   return (
     <>
-      <nav className={style.nav}>
-        <DropDown
-          direction={'row'}
-          align={'start'}
-          icon={<HiMenuAlt2 size={20} />}
-        >
-          {linkElements}
-        </DropDown>
+      <SideMenu top left icon={<HiMenuAlt2 size={20} />}>
+        {linkElements}
+      </SideMenu>
+      <SideMenu top right icon={<IoSettings size={20} />}>
         <ThemeSwitch />
-      </nav>
-      <main>{children}</main>
+      </SideMenu>
+      {children}
     </>
   )
 }

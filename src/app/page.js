@@ -12,7 +12,7 @@ export default async function Home() {
       <header className={style.header}>
         <ThemeSwitch />
       </header>
-      <main className={style.main}>
+      <main className={style.home}>
         <h1 className={style.title}>
           <Link href={'/about-me'}>My</Link> Books
         </h1>

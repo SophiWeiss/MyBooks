@@ -4,6 +4,7 @@ createdAt: 2022-12-02
 updatedAt: 2023-06-02
 status: Not Finished
 index: 1
+tags: [fantasy, magic, familyissues, academy, testonendurance]
 ---
 
 Мир, где особенную магию нужно заслужить, пережив испытания на разных краях света. Мир, где все жители планеты, кроме

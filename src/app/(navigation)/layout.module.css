@@ -1,16 +1,7 @@
-.nav {
-    position: sticky;
-    top: var(--space-l);
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-}
-
 .linkElement {
     display: flex;
     align-items: center;
     padding: 0 var(--space-l);
-    width: max-content;
     height: var(--size-icon-2xl);
     font-weight: bold;
     color: var(--color-text-accent);
@@ -32,4 +23,3 @@
     box-shadow: var(--shadow-active);
     transition: translate .15s, box-shadow .15s;
 }
-
