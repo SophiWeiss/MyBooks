@@ -49,7 +49,7 @@ export default function SideMenu({ icon, side, children }) {
               initial={'initial'}
               animate={'visible'}
               exit={'exit'}
-              className={style.elements}
+              className={style.items}
               style={side === 'right' && { alignItems: 'flex-end', right: 0 }}
             >
               {Children.map(children, child => (
