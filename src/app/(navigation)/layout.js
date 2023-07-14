@@ -28,14 +28,12 @@ export default function Navigation({ children }) {
 
   return (
     <>
-      <nav className={style.nav}>
-        <SideMenu side={'left'} icon={<HiMenuAlt2 size={20} />}>
-          {linkElements}
-        </SideMenu>
-        <SideMenu side={'right'} icon={<IoSettings size={20} />}>
-          <ThemeSwitch />
-        </SideMenu>
-      </nav>
+      <SideMenu top left icon={<HiMenuAlt2 size={20} />}>
+        {linkElements}
+      </SideMenu>
+      <SideMenu top right icon={<IoSettings size={20} />}>
+        <ThemeSwitch />
+      </SideMenu>
       {children}
     </>
   )

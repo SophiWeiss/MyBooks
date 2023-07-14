@@ -21,7 +21,7 @@
   - [ ] "mark as read" circle:
   - [ ] chapters menu:
     - [ ] list scrolling
-- [ ] book page
+- [x] book page
 - main menu
   - [ ] animation from 3 lines to cross
   - [x] links
@@ -32,7 +32,7 @@
   - [ ] full-screen mode
   - [ ] font-size-changer
   - [x] hovered button is dyed
-- rewrite markdown support with mdx
+- [ ] rewrite markdown support with mdx
 - [ ] bookmarks
 - [ ] mobile
 - [ ] blogs?
