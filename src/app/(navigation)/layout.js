@@ -1,12 +1,18 @@
+'use client'
+
 import style from './layout.module.css'
 import Link from 'next/link'
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { IoSettings } from 'react-icons/io5'
+import { useSelectedLayoutSegments } from 'next/navigation'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import Ukraine from '@/components/Ukraine'
 import SideMenu from '@/components/SideMenu'
 
 export default function Navigation({ children }) {
+  const segment = useSelectedLayoutSegments()
+  const isBookChapterSegment = (segment[0] = 'books' && segment.length === 3)
+
   const links = [
     { href: '/', component: 'Home' },
     { href: '/books', component: 'Books' },

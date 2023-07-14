@@ -37,6 +37,7 @@
   - [ ] full-screen mode
   - [ ] font-size-changer
   - [ ] hovered button is dyed
+- rewrite markdown support with mdx
 - [ ] bookmarks
 - [ ] mobile
 - [ ] blogs?
