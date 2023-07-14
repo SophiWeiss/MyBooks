@@ -1,14 +1,10 @@
 .allBooks {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-l);
-    max-width: 1200px;
-    flex: 1;
+    max-width: 1300px;
+    align-items: stretch;
 }
 
 .header {
     text-align: center;
-    align-self: center;
     font-size: var(--font-size-2xl);
     color: var(--color-text-accent);
 }

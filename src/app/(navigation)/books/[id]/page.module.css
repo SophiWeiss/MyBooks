@@ -1,8 +1,6 @@
 .book {
-    flex-direction: column;
-    justify-content: start;
-    gap: var(--space-l);
-    max-width: 800px;
+    max-width: 720px;
+    align-items: stretch;
 }
 
 .title {

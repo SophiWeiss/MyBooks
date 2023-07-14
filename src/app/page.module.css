@@ -1,15 +1,13 @@
 .header {
     display: flex;
+    width: 100%;
     justify-content: flex-end;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
+.home {
+    max-height: 470px;
     justify-content: space-between;
     align-items: center;
-    max-height: 470px;
-    gap: var(--space-l);
 }
 
 .title {
@@ -19,6 +17,7 @@
 
 .footer {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     gap: var(--space-l);
     align-items: flex-end;

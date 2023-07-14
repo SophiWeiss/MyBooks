@@ -1,3 +1,11 @@
+.main {
+    display: flex;
+    width: 100%;
+    gap: var(--space-l);
+    flex-direction: column;
+    flex: 1;
+}
+
 .interactive-border-background {
     display: flex;
     align-items: center;

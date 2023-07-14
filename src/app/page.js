@@ -1,4 +1,5 @@
 import style from './page.module.css'
+import commonStyle from '@/css/common.module.css'
 import Link from 'next/link'
 import { getSortedBooksData } from '@/lib/books'
 import ThemeSwitch from '@/components/ThemeSwitch'
@@ -12,7 +13,7 @@ export default async function Home() {
       <header className={style.header}>
         <ThemeSwitch />
       </header>
-      <main className={style.main}>
+      <main className={[commonStyle.main, style.home].join(' ')}>
         <h1 className={style.title}>
           <Link href={'/about-me'}>My</Link> Books
         </h1>

@@ -1,4 +1,5 @@
 import style from './page.module.css'
+import commonStyle from '@/css/common.module.css'
 import { getBookContent, getBookData, getSortedBooksData } from '@/lib/books'
 import Separator from '@/components/Separator'
 import Markdown from '@/components/Markdown'
@@ -24,7 +25,7 @@ export default async function Book({ params }) {
   let data = await getBookData(id)
   let chapters = await getBookContent(id)
   return (
-    <main className={style.book}>
+    <main className={[commonStyle.main, style.book].join(' ')}>
       <h1 className={style.title}>{data.title}</h1>
       <div className={style.data}>
         <p>
