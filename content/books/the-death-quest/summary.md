@@ -4,6 +4,7 @@ createdAt: 2016-10
 updatedAt: 2021
 status: Done
 index: 2
+tags: [fantasy, teengroup, friendship, revenge, rituals]
 ---
 
 Абсолютно разные люди были объединены одной целью - найти и спасти важного для них человека. Но их общая знакомая
