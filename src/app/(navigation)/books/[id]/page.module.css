@@ -1,12 +1,7 @@
 .book {
+    composes: main from 'src/css/common.module.css';
     max-width: 720px;
     align-items: stretch;
-}
-
-.title {
-    text-align: center;
-    font-size: var(--font-size-2xl);
-    color: var(--color-text-accent);
 }
 
 .data {

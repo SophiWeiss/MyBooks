@@ -6,11 +6,6 @@
     text-align: center;
 }
 
-.notFound h1 {
-    color: var(--color-text-accent);
-    font-size: var(--font-size-2xl);
-}
-
 .notFound p {
     font-size: var(--font-size-s);
 }

@@ -5,14 +5,10 @@
 }
 
 .home {
+    composes: main from 'src/css/common.module.css';
     max-height: 470px;
     justify-content: space-between;
     align-items: center;
-}
-
-.title {
-    text-align: center;
-    font-size: var(--font-size-2xl);
 }
 
 .footer {

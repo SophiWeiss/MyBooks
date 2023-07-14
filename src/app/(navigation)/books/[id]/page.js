@@ -25,8 +25,8 @@ export default async function Book({ params }) {
   let data = await getBookData(id)
   let chapters = await getBookContent(id)
   return (
-    <main className={[commonStyle.main, style.book].join(' ')}>
-      <h1 className={style.title}>{data.title}</h1>
+    <main className={style.book}>
+      <h1 className={commonStyle.title}>{data.title}</h1>
       <div className={style.data}>
         <p>
           <span className={style.propertyLabel}>Status:</span> {data.status}
@@ -38,8 +38,8 @@ export default async function Book({ params }) {
         </p>
         <Separator vertical />
         <p>
-          <span className={style.propertyLabel}>Read Time:</span> work in
-          progress
+          <span className={style.propertyLabel}>Read Time:</span> not yet
+          implemented
         </p>
       </div>
       <Markdown className={style.description}>{data.content}</Markdown>

@@ -11,8 +11,8 @@ export default async function AllBooks() {
   const books = await getSortedBooksData()
 
   return (
-    <main className={[commonStyle.main, style.allBooks].join(' ')}>
-      <h1 className={style.header}>All Books</h1>
+    <main className={style.allBooks}>
+      <h1 className={commonStyle.title}>All Books</h1>
       <BookGrid books={books} />
     </main>
   )

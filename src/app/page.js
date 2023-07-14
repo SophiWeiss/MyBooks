@@ -13,8 +13,8 @@ export default async function Home() {
       <header className={style.header}>
         <ThemeSwitch />
       </header>
-      <main className={[commonStyle.main, style.home].join(' ')}>
-        <h1 className={style.title}>
+      <main className={style.home}>
+        <h1 className={commonStyle.title}>
           <Link href={'/about-me'}>My</Link> Books
         </h1>
         <BookCarousel books={await getSortedBooksData()} />

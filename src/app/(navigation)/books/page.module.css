@@ -1,10 +1,5 @@
 .allBooks {
+    composes: main from 'src/css/common.module.css';
     max-width: 1300px;
     align-items: stretch;
-}
-
-.header {
-    text-align: center;
-    font-size: var(--font-size-2xl);
-    color: var(--color-text-accent);
 }

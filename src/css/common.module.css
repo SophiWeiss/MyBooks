@@ -6,6 +6,12 @@
     flex: 1;
 }
 
+.title {
+    text-align: center;
+    color: var(--color-text-accent);
+    font-size: var(--font-size-2xl);
+}
+
 .interactive-border-background {
     display: flex;
     align-items: center;
