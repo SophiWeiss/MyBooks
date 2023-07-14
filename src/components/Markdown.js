@@ -1,8 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 
-export default function Markdown(props) {
-  const { children, ...other } = props
+export default function Markdown({ children, ...other }) {
   return (
     <ReactMarkdown
       {...other}
