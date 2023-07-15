@@ -1,7 +1,7 @@
 .switch {
     --padding: 3px;
     display: flex;
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     position: relative;
     cursor: pointer;
     align-items: center;
@@ -38,7 +38,7 @@
     height: calc(100% - 2 * var(--padding));
     aspect-ratio: 1;
     background: var(--color-icon-accent);
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     z-index: 1;
     top: var(--padding);
     left: var(--padding);

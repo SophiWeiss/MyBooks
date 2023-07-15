@@ -6,7 +6,7 @@
     font-weight: bold;
     color: var(--color-text-accent);
     background: var(--color-background-secondary);
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     border: var(--size-border-m) solid var(--color-border-primary);
     box-shadow: var(--shadow);
     transition: translate .3s, box-shadow .3s;

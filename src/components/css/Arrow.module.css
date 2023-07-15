@@ -4,7 +4,7 @@
     justify-content: center;
     width: var(--size-icon-2xl);
     aspect-ratio: 1;
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     flex-shrink: 0;
     border: var(--size-border-m) solid transparent;
     transition: translate .3s, background .3s, border .3s, box-shadow .3s;

@@ -1,6 +1,6 @@
 .separator {
     background: var(--color-background-secondary);
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     align-self: center;
 }
 

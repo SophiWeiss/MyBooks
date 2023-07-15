@@ -2,7 +2,7 @@
     display: flex;
     gap: var(--space-xs);
     padding: var(--space-m);
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     border: var(--size-border-m) solid transparent;
     transition: translate .3s, background .3s, border .3s, box-shadow .3s;
 }
@@ -11,7 +11,7 @@
     background: var(--color-icon-secondary);
     width: 6px;
     aspect-ratio: 1;
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     transition: background-color .3s;
     flex-shrink: 0;
 }

@@ -41,7 +41,7 @@
     font-size: var(--font-size-s);
     color: var(--color-text-accent);
     background: var(--color-background-primary);
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     border: var(--size-border-m) solid var(--color-border-secondary);
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
