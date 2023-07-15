@@ -2,6 +2,10 @@ import style from './not-found.module.css'
 import commonStyle from '@/css/common.module.css'
 import Link from 'next/link'
 
+export const metadata = {
+  title: '404: This cat could not be found'
+}
+
 export default function NotFound() {
   return (
     <main className={style.notFound}>
