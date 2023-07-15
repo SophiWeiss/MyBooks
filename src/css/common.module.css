@@ -14,8 +14,6 @@
 
 .interactive-background {
     display: flex;
-    align-items: center;
-    justify-content: center;
     background: var(--color-background-primary);
     border-radius: var(--border-radius-full);
     flex-shrink: 0;
@@ -38,8 +36,6 @@
 
 .interactive-border-background {
     display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: var(--border-radius-full);
     flex-shrink: 0;
     border: var(--size-border-m) solid transparent;
@@ -60,8 +56,6 @@
 
 .interactive-translation {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
     box-shadow: var(--shadow);
     transition: translate .3s, box-shadow .3s;
