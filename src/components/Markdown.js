@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Markdown({ children, className, ...other }) {
   return (
