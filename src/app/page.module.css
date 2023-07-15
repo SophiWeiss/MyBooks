@@ -6,6 +6,9 @@
 
 .home {
     composes: main from 'src/css/common.module.css';
+}
+
+main.home {
     max-height: 470px;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +16,9 @@
 
 .title {
     composes: title from 'src/css/common.module.css';
+}
+
+h1.title {
     color: var(--color-text-primary);
 }
 

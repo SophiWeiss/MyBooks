@@ -1,5 +1,8 @@
 .book {
     composes: main from 'src/css/common.module.css';
+}
+
+main.book {
     max-width: 720px;
     align-items: stretch;
 }

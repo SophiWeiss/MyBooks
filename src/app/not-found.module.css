@@ -1,5 +1,8 @@
 .notFound {
     composes: main from 'src/css/common.module.css';
+}
+
+main.notFound {
     align-items: center;
     justify-content: center;
     text-align: center;
