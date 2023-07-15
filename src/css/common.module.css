@@ -1,7 +1,7 @@
 .main {
     display: flex;
     width: 100%;
-    gap: var(--space-l);
+    gap: var(--space-xl);
     flex-direction: column;
     flex: 1;
 }
