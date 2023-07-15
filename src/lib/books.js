@@ -30,3 +30,8 @@ export async function getBookContent(id) {
       })
   )
 }
+
+export async function getChapterContent(id, chapter) {
+  const chapterPath = path.join('books', id, 'chapters', `${chapter}.md`)
+  return { index: chapter, ...(await readMd(chapterPath)) }
+}
