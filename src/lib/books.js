@@ -26,7 +26,7 @@ export async function getBookContent(id) {
       .sort((a, b) => (parseInt(a) > parseInt(b) ? 1 : -1))
       .map(async fileName => {
         const fullPath = path.join(chaptersRelativePath, fileName)
-        return await readMd(fullPath)
+        return { index: parseInt(fileName), ...(await readMd(fullPath)) }
       })
   )
 }
