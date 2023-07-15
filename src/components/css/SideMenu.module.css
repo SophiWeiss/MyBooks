@@ -62,6 +62,7 @@ button.button {
 .overlay {
     position: fixed;
     inset: 0;
-    background: var(--color-background-primary);
+    background: color-mix(in srgb, var(--color-background-primary) 60%, transparent);
+    backdrop-filter: blur(1px);
     z-index: 3;
 }
