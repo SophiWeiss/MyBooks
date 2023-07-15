@@ -1,6 +1,6 @@
 .article {
     align-self: center;
-    max-width: var(--size-article-max-width);
+    max-width: 720px;
 }
 
 .article h1 {
@@ -70,12 +70,12 @@
     left: var(--space-xs);
     height: calc(100% - 2 * var(--space-xs));
     background: var(--color-background-accent);
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
 }
 
 .article hr {
     border-width: var(--size-border-m);
     border-style: solid;
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
     color: var(--color-border-primary);
 }

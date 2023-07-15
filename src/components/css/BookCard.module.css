@@ -1,34 +1,24 @@
-.bookCard, .bookCardEmpty {
-    display: flex;
+.bookCard {
+    composes: interactive-translation from 'src/css/common.module.css';
+}
+
+a.bookCard, .bookCardEmpty {
     flex-direction: column;
     gap: var(--space-s);
     padding: var(--space-m) var(--space-xl);
     background: var(--color-background-secondary);
     border: var(--size-border-m) solid var(--color-border-primary);
-    border-radius: var(--size-border-radius-m);
-    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-m);
     max-width: 400px;
-    transition: translate .3s, box-shadow .3s;
 }
 
-.bookCard:hover {
-    translate: 0 -4px;
-    box-shadow: var(--shadow-hover);
-}
-
-.bookCard:active {
-    translate: 0;
-    box-shadow: var(--shadow-active);
-    transition: translate .15s, box-shadow .15s;
+a.bookCard:hover {
+    text-decoration: none;
 }
 
 .bookCardEmpty {
     width: 400px;
     height: 200px;
-}
-
-.bookCard:hover {
-    text-decoration: none;
 }
 
 .description {
@@ -77,7 +67,7 @@
 .statusIndicator {
     width: 6px;
     aspect-ratio: 1;
-    border-radius: var(--size-border-radius-full);
+    border-radius: var(--border-radius-full);
 }
 
 .statusIndicator[data-status="Done"] {

@@ -1,19 +1,15 @@
-.Ukraine, .UkraineLink {
+.UkraineLink {
+    composes: interactive-translation from 'src/css/common.module.css';
+}
+
+a.UkraineLink {
+    display: block;
+}
+
+.Ukraine {
     display: block;
     flex-shrink: 0;
     box-shadow: var(--shadow);
-    transition: translate .3s, box-shadow .3s;
-}
-
-.UkraineLink:hover {
-    translate: 0 -4px;
-    box-shadow: var(--shadow-hover);
-}
-
-.UkraineLink:active {
-    translate: 0;
-    box-shadow: var(--shadow-active);
-    transition: translate .15s, box-shadow .15s;
 }
 
 .UkraineBlue {

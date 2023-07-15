@@ -38,19 +38,18 @@
 }
 
 .button {
-    display: flex;
+    composes: interactive-background from 'src/css/common.module.css';
+}
+
+button.button {
     align-items: center;
     justify-content: center;
     height: var(--size-icon-2xl);
     aspect-ratio: 1;
     color: var(--color-icon-accent);
-    background: var(--color-background-primary);
-    border-radius: var(--size-border-radius-full);
-    border: var(--size-border-m) solid var(--color-border-secondary);
-    transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.dropDown[data-is-open='true'] .button, .button:hover  {
+.dropDown[data-is-open='true'] .button  {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
@@ -58,12 +57,6 @@
 
 [data-theme='dark'] :is(.dropDown[data-is-open='true'] .button, .button:hover) {
     color: var(--color-icon-accent-variant);
-}
-
-.button:active {
-    box-shadow: var(--shadow-active);
-    translate: 0 4px;
-    transition: box-shadow .15s, translate .15s;
 }
 
 .overlay {

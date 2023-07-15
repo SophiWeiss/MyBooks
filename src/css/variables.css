@@ -39,10 +39,8 @@
     --size-icon-xl: 40px;
     --size-icon-2xl: 50px;
 
-    --size-article-max-width: 65ch;
-
-    --size-border-radius-m: 20px;
-    --size-border-radius-full: 999px;
+    --border-radius-m: 20px;
+    --border-radius-full: 999px;
 
     --font-size-2xs: 12px;
     --font-size-xs: 16px;

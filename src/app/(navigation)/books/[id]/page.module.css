@@ -1,5 +1,8 @@
 .book {
     composes: main from 'src/css/common.module.css';
+}
+
+main.book {
     max-width: 720px;
     align-items: stretch;
 }
@@ -26,35 +29,27 @@
 }
 
 .chapters {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
     gap: var(--space-l);
+    flex-wrap: wrap;
 }
 
 .chapter {
-    display: flex;
+    composes: interactive-background from 'src/css/common.module.css';
+}
+
+a.chapter {
     align-items: center;
     justify-content: center;
-    padding: var(--space-m) 0;
     font-weight: bold;
     text-align: center;
     font-size: var(--font-size-s);
     color: var(--color-text-accent);
-    background: var(--color-background-primary);
-    border-radius: var(--size-border-radius-full);
-    border: var(--size-border-m) solid var(--color-border-secondary);
-    transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
+    flex: 1;
+    padding: var(--space-m) var(--space-xl);
+    min-width: max-content;
 }
 
 .chapter:hover  {
-    border: var(--size-border-m) solid var(--color-border-primary);
     text-decoration: none;
-    background: var(--color-background-secondary);
-    box-shadow: var(--shadow);
-}
-
-.chapter:active {
-    box-shadow: var(--shadow-active);
-    translate: 0 4px;
-    transition: box-shadow .15s, translate .15s;
 }
