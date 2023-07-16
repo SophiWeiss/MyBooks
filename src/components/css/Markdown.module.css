@@ -1,0 +1,9 @@
+.imgContainer {
+    position: relative;
+}
+
+.imgContainer img {
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--shadow);
+    border: var(--size-border-m) solid var(--color-border-secondary);
+}
