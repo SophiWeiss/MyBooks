@@ -40,7 +40,7 @@ export default function SideMenu({ icon, top, bottom, left, right, children }) {
         )}
       </AnimatePresence>
       <div
-        className={style.dropDown}
+        className={style.sideMenu}
         data-left={left}
         data-right={right}
         data-top={top}
