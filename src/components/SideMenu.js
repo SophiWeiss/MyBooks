@@ -32,7 +32,7 @@ export default function SideMenu({ icon, top, bottom, left, right, children }) {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
             className={style.overlay}
