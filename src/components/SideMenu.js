@@ -10,7 +10,7 @@ export default function SideMenu({ icon, top, bottom, left, right, children }) {
   const [isOpen, setIsOpen] = useState(false)
   const pathName = usePathname()
 
-  const staggerDirection = left ? 1 : -1
+  const staggerDirection = top ? 1 : -1
   const variants = {
     initial: { transition: { staggerChildren: 0.07, staggerDirection } },
     visible: { transition: { staggerChildren: 0.07, staggerDirection } },

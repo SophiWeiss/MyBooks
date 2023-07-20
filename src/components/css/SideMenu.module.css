@@ -44,7 +44,7 @@ body.sideMenuOpen {
 }
 
 .button {
-    composes: interactive-background from 'src/css/common.module.css';
+    composes: interactiveBackground from 'src/css/common.module.css';
 }
 
 button.button {

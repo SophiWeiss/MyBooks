@@ -1,6 +1,6 @@
 'use client'
 
-import style from './layout.module.css'
+import commonStyle from '@/css/common.module.css'
 import Link from 'next/link'
 import { HiMenuAlt2 } from 'react-icons/hi'
 import { IoSettings } from 'react-icons/io5'
@@ -21,7 +21,7 @@ export default function Navigation({ children }) {
   ]
 
   const linkElements = links.map(({ href, component }) => (
-    <Link href={href} key={href} className={style.linkElement}>
+    <Link href={href} key={href} className={commonStyle.sideMenuLink}>
       {component}
     </Link>
   ))

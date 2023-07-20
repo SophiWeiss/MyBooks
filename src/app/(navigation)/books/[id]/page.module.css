@@ -35,7 +35,7 @@ main.book {
 }
 
 .chapter {
-    composes: interactive-background from 'src/css/common.module.css';
+    composes: interactiveBackground from 'src/css/common.module.css';
 }
 
 a.chapter {

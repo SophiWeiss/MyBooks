@@ -12,7 +12,7 @@
     font-size: var(--font-size-2xl);
 }
 
-.interactive-background {
+.interactiveBackground {
     display: flex;
     background: var(--color-background-primary);
     border-radius: var(--border-radius-full);
@@ -21,20 +21,20 @@
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.interactive-background:hover  {
+.interactiveBackground:hover  {
     border: var(--size-border-m) solid var(--color-border-primary);
     text-decoration: none;
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
 }
 
-.interactive-background:active {
+.interactiveBackground:active {
     box-shadow: var(--shadow-active);
     translate: 0 4px;
     transition: box-shadow .15s, translate .15s;
 }
 
-.interactive-border-background {
+.interactiveBorderBackground {
     display: flex;
     border-radius: var(--border-radius-full);
     flex-shrink: 0;
@@ -42,32 +42,51 @@
     transition: translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.interactive-border-background:hover {
+.interactiveBorderBackground:hover {
     background: var(--color-background-secondary);
     border: var(--size-border-m) solid var(--color-border-primary);
     box-shadow: var(--shadow);
 }
 
-.interactive-border-background:active {
+.interactiveBorderBackground:active {
     box-shadow: var(--shadow-active);
     translate: 0 4px;
     transition: box-shadow .15s, translate .15s;
 }
 
-.interactive-translation {
+.interactiveTranslation {
     display: flex;
     flex-shrink: 0;
     box-shadow: var(--shadow);
     transition: translate .3s, box-shadow .3s;
 }
 
-.interactive-translation:hover {
+.interactiveTranslation:hover {
     translate: 0 -4px;
     box-shadow: var(--shadow-hover);
 }
 
-.interactive-translation:active {
+.interactiveTranslation:active {
     translate: 0;
     box-shadow: var(--shadow-active);
     transition: translate .15s, box-shadow .15s;
+}
+
+.sideMenuLink {
+    composes: interactiveTranslation;
+}
+
+a.sideMenuLink {
+    align-items: center;
+    padding: 0 var(--space-l);
+    height: var(--size-icon-2xl);
+    font-weight: bold;
+    color: var(--color-text-accent);
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-full);
+    border: var(--size-border-m) solid var(--color-border-primary);
+}
+
+.sideMenuLink:hover {
+    text-decoration: none;
 }

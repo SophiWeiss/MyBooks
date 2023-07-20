@@ -1,5 +1,5 @@
 .arrow {
-    composes: interactive-border-background from 'src/css/common.module.css';
+    composes: interactiveBorderBackground from 'src/css/common.module.css';
 }
 
 button.arrow {
