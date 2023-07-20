@@ -26,6 +26,26 @@ export default function SideMenu({ icon, top, bottom, left, right, children }) {
 
   useEffect(() => setIsOpen(false), [pathName])
 
+  useEffect(() => {
+    const addMargin = () => {
+      let oldWidth = document.documentElement.clientWidth
+      document.body.classList.add(style.sideMenuOpen)
+      let newWidth = document.documentElement.clientWidth
+      let scrollbarWidth = newWidth - oldWidth
+      document.body.style.marginRight = `${scrollbarWidth}px`
+    }
+
+    const removeMargin = () => {
+      document.body.classList.remove(style.sideMenuOpen)
+      document.body.style.marginRight = `0`
+    }
+
+    if (isOpen) addMargin()
+    else removeMargin()
+
+    return removeMargin
+  }, [isOpen, pathName])
+
   return (
     <>
       <AnimatePresence>

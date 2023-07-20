@@ -3,32 +3,38 @@
     position: fixed;
     gap: var(--space-l);
     z-index: 2;
+    padding: inherit;
     transition: z-index 0s ease .3s;
 }
 
 .sideMenu[data-top='true'] {
-    top: var(--space-l);
+    top: 0;
     flex-direction: column;
 }
 
 .sideMenu[data-bottom='true'] {
-    bottom: var(--space-l);
+    bottom: 0;
     flex-direction: column-reverse;
 }
 
 .sideMenu[data-left='true'] {
-    left: var(--space-l);
+    left: 0;
     align-items: start;
 }
 
 .sideMenu[data-right='true'] {
-    right: var(--space-l);
+    right: 0;
+    margin-right: inherit;
     align-items: end;
 }
 
 .sideMenu[data-is-open='true'] {
     z-index: 4;
     transition: z-index 0s ease 0s;
+}
+
+body.sideMenuOpen {
+    overflow: hidden;
 }
 
 .items {
