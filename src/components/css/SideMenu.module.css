@@ -5,6 +5,7 @@
     z-index: 2;
     padding: inherit;
     transition: z-index 0s ease .3s;
+    max-height: calc(100svh - var(--space-l) - var(--size-icon-2xl));
 }
 
 .sideMenu[data-top='true'] {
@@ -41,6 +42,11 @@ body.sideMenuOpen {
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
+    overflow: scroll;
+}
+
+.items::-webkit-scrollbar {
+    height: 0;
 }
 
 .button {
