@@ -5,16 +5,27 @@ import { useEffect, Children } from 'react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import Separator from '@/components/Separator'
 
-export default function SideMenu({ icon, top, bottom, left, right, children }) {
+export default function SideMenu({
+  icon,
+  top,
+  bottom,
+  left,
+  right,
+  children,
+  scroll
+}) {
   const [isOpen, setIsOpen] = useState(false)
   const pathName = usePathname()
 
   const staggerDirection = top ? 1 : -1
+  const staggerChildren = scroll ? 0 : 0.06
+  const opacity = scroll ? 0 : 1
   const variants = {
-    initial: { transition: { staggerChildren: 0.07, staggerDirection } },
-    visible: { transition: { staggerChildren: 0.07, staggerDirection } },
-    exit: { transition: { staggerChildren: 0.07, staggerDirection } }
+    initial: { opacity, transition: { staggerChildren, staggerDirection } },
+    visible: { opacity: 1, transition: { staggerChildren, staggerDirection } },
+    exit: { opacity, transition: { staggerChildren, staggerDirection } }
   }
 
   const translateX = left ? -100 : 100
@@ -46,6 +57,16 @@ export default function SideMenu({ icon, top, bottom, left, right, children }) {
     return removeMargin
   }, [isOpen, pathName])
 
+  const scrollSeparator = scroll && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <Separator horizontal />
+    </motion.div>
+  )
+
   return (
     <>
       <AnimatePresence>
@@ -66,30 +87,38 @@ export default function SideMenu({ icon, top, bottom, left, right, children }) {
         data-top={top}
         data-bottom={bottom}
         data-is-open={isOpen}
+        data-scroll={scroll}
       >
         <button className={style.button} onClick={() => setIsOpen(x => !x)}>
           {icon}
         </button>
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              variants={variants}
-              initial={'initial'}
-              animate={'visible'}
-              exit={'exit'}
-              className={style.items}
-            >
-              {Children.map(children, child => (
+        <div className={style.items}>
+          <AnimatePresence>
+            {isOpen && (
+              <>
+                {scrollSeparator}
                 <motion.div
-                  variants={elementVariants}
-                  style={{ width: 'max-content' }}
+                  variants={variants}
+                  initial={'initial'}
+                  animate={'visible'}
+                  exit={'exit'}
+                  className={style.itemsList}
                 >
-                  {child}
+                  {Children.map(children, (child, i) => (
+                    <motion.div
+                      variants={elementVariants}
+                      style={{ width: 'max-content' }}
+                      key={i}
+                    >
+                      {child}
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+                {scrollSeparator}
+              </>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </>
   )

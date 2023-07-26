@@ -2,6 +2,7 @@
     background: var(--color-background-secondary);
     border-radius: var(--border-radius-full);
     align-self: center;
+    flex-shrink: 0;
 }
 
 .separator[data-horizontal='true'] {
