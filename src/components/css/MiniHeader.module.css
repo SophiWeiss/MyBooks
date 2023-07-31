@@ -1,0 +1,15 @@
+.miniHeader {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-nunito);
+    color: var(--color-text-tertiary);
+    border-bottom: var(--size-border-m) solid var(--color-border-secondary);
+    padding: var(--space-xs) 0;
+    width: 800px;
+    text-align: center;
+    background: var(--color-background-primary);
+    z-index: 1;
+}

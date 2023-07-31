@@ -2,6 +2,7 @@ import commonStyle from '@/css/common.module.css'
 import articleStyle from '@/css/articles.module.css'
 import { getBookContent, getBookData, getChapterContent } from '@/lib/books'
 import Markdown from '@/components/Markdown'
+import MiniHeader from '@/components/MiniHeader'
 
 export const dynamicParams = false
 
@@ -27,6 +28,11 @@ export default async function Chapter({ params }) {
 
   return (
     <main className={commonStyle.main}>
+      <MiniHeader
+        book={bookTitle}
+        chapter={chapterTitle}
+        visibleScrollPosition={320}
+      />
       <article className={articleStyle.article}>
         <Markdown>{`# ${bookTitle}\n## ${chapterTitle}\n${content}`}</Markdown>
       </article>
