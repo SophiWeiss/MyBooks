@@ -23,7 +23,7 @@
   - [ ] next/prev chapter buttons
 - [x] book page
 - side menu
-  - [ ] scrolling
+  - [x] scrolling
   - [ ] animation for button
   - [x] links
   - [x] hovered button dyes

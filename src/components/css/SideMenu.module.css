@@ -79,7 +79,7 @@ button.button {
     color: var(--color-icon-accent);
 }
 
-.sideMenu[data-is-open='true'] .button  {
+.sideMenu[data-is-open='true'] .button {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);

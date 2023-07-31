@@ -21,7 +21,7 @@
     transition: color .3s, translate .3s, background .3s, border .3s, box-shadow .3s;
 }
 
-.interactiveBackground:hover  {
+.interactiveBackground:hover {
     border: var(--size-border-m) solid var(--color-border-primary);
     text-decoration: none;
     background: var(--color-background-secondary);
