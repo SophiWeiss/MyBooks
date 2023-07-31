@@ -50,6 +50,6 @@ a.chapter {
     min-width: max-content;
 }
 
-.chapter:hover  {
+.chapter:hover {
     text-decoration: none;
 }

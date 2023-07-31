@@ -1,9 +1,8 @@
 'use client'
 
 import style from './css/SideMenu.module.css'
-import { useEffect, Children } from 'react'
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { Children, useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Separator from '@/components/Separator'
 
