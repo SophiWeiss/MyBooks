@@ -11,7 +11,7 @@ import SideMenu from '@/components/SideMenu'
 
 export default function Navigation({ children }) {
   const segment = useSelectedLayoutSegments()
-  const isBookChapterSegment = (segment[0] = 'books' && segment.length === 3)
+  const isBookChapterSegment = segment[0] === 'books' && segment.length === 4
 
   const links = [
     { href: '/', component: 'Home' },

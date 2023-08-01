@@ -8,7 +8,7 @@
     color: var(--color-text-tertiary);
     border-bottom: var(--size-border-m) solid var(--color-border-secondary);
     padding: var(--space-xs) 0;
-    width: 800px;
+    width: 720px;
     text-align: center;
     background: var(--color-background-primary);
     z-index: 1;

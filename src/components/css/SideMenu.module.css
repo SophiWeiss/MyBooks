@@ -7,9 +7,6 @@
     transition: z-index 0s ease .3s;
 }
 
-.sideMenu[data-scroll='true'] {
-}
-
 .sideMenu[data-top='true'] {
     top: 0;
     flex-direction: column;
@@ -54,6 +51,10 @@ body.sideMenuOpen {
     margin-right: calc(-1 * var(--space-l));
     padding-left: var(--space-l);
     padding-right: var(--space-l);
+}
+
+[data-right='true'] .itemsList {
+    align-items: flex-end;
 }
 
 [data-scroll='true'] .itemsList {
