@@ -1,5 +1,5 @@
 .bookCard {
-    composes: interactive-translation from 'src/css/common.module.css';
+    composes: interactiveTranslation from 'src/css/common.module.css';
 }
 
 a.bookCard, .bookCardEmpty {

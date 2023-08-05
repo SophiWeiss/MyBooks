@@ -30,10 +30,10 @@ export default async function Book({ params }) {
       <Markdown className={style.description}>{data.content}</Markdown>
       <Separator horizontal />
       <div className={style.chapters}>
-        {chapters.map((chapter, i) => (
+        {chapters.map(chapter => (
           <Link
             key={chapter.title}
-            href={`/books/${id}/${i + 1}`}
+            href={`/books/${id}/${chapter.index}`}
             className={style.chapter}
           >
             {chapter.title}

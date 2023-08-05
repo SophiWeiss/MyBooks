@@ -16,6 +16,7 @@
 
     --color-border-primary: #cebfff;
     --color-border-secondary: #e7e0ff;
+    --color-border-accent: #8771ed;
 
     --color-icon-accent: #8771ed;
     --color-icon-accent-variant: #4a3492;
@@ -75,6 +76,7 @@
 
     --color-border-primary: #2b2e44;
     --color-border-secondary: #24273a;
+    --color-border-accent: #8452da;
 
     --color-icon-accent: #8452da;
     --color-icon-accent-variant: #a867ff;

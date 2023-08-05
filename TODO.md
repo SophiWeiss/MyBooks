@@ -16,14 +16,14 @@
   - [ ] progress bar
   - [ ] full description
 - chapter page
-  - [ ] main layout
-  - [ ] mini-header
+  - [x] main layout
+  - [x] mini-header
   - [ ] reading settings
   - [ ] "mark as read" circle
   - [ ] next/prev chapter buttons
 - [x] book page
 - side menu
-  - [ ] scrolling
+  - [x] scrolling
   - [ ] animation for button
   - [x] links
   - [x] hovered button dyes

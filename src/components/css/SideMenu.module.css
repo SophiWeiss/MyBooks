@@ -1,44 +1,75 @@
-.dropDown {
+.sideMenu {
     display: flex;
     position: fixed;
     gap: var(--space-l);
     z-index: 2;
+    padding: inherit;
     transition: z-index 0s ease .3s;
 }
 
-.dropDown[data-top='true'] {
-    top: var(--space-l);
+.sideMenu[data-top='true'] {
+    top: 0;
     flex-direction: column;
 }
 
-.dropDown[data-bottom='true'] {
-    bottom: var(--space-l);
+.sideMenu[data-bottom='true'] {
+    bottom: 0;
     flex-direction: column-reverse;
 }
 
-.dropDown[data-left='true'] {
-    left: var(--space-l);
+.sideMenu[data-left='true'] {
+    left: 0;
     align-items: start;
 }
 
-.dropDown[data-right='true'] {
-    right: var(--space-l);
+.sideMenu[data-right='true'] {
+    right: 0;
+    margin-right: inherit;
     align-items: end;
 }
 
-.dropDown[data-is-open='true'] {
+.sideMenu[data-is-open='true'] {
     z-index: 4;
     transition: z-index 0s ease 0s;
+}
+
+body.sideMenuOpen {
+    overflow: hidden;
 }
 
 .items {
     display: flex;
     flex-direction: column;
+    max-height: calc(100svh - 4 * var(--space-l) - 2 * var(--size-icon-2xl));
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-l);
+    margin-left: calc(-1 * var(--space-l));
+    margin-right: calc(-1 * var(--space-l));
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+}
+
+[data-right='true'] .itemsList {
+    align-items: flex-end;
+}
+
+[data-scroll='true'] .itemsList {
+    overflow: scroll;
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+}
+
+.itemsList::-webkit-scrollbar {
+    height: 0;
+    width: 0;
 }
 
 .button {
-    composes: interactive-background from 'src/css/common.module.css';
+    composes: interactiveBackground from 'src/css/common.module.css';
 }
 
 button.button {
@@ -49,13 +80,13 @@ button.button {
     color: var(--color-icon-accent);
 }
 
-.dropDown[data-is-open='true'] .button  {
+.sideMenu[data-is-open='true'] .button {
     border: var(--size-border-m) solid var(--color-border-primary);
     background: var(--color-background-secondary);
     box-shadow: var(--shadow);
 }
 
-[data-theme='dark'] :is(.dropDown[data-is-open='true'] .button, .button:hover) {
+[data-theme='dark'] :is(.sideMenu[data-is-open='true'] .button, .button:hover) {
     color: var(--color-icon-accent-variant);
 }
 
