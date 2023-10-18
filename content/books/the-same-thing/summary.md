@@ -1,7 +1,7 @@
 ---
 title: Одно и то же
 createdAt: 2023-06-11
-updatedAt: 2023-08-04
+updatedAt: 2023-10-18
 status: In Progress
 index: 0
 tags: [dystopia, fantasy, time, changes]
