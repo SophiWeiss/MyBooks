@@ -4,24 +4,29 @@ import style from './css/MiniHeader.module.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-export default function MiniHeader({ book, chapter, visibleScrollPosition }) {
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const handleScroll = () => {
-    const position = window.scrollY
-    setScrollPosition(position)
-  }
+export default function MiniHeader({ book, chapter, targetId }) {
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
+    const handleScroll = () => {
+      const target = document.getElementById(targetId)
+      if (target.getBoundingClientRect().bottom < 0) {
+        setVisible(true)
+      } else {
+        setVisible(false)
+      }
+    }
+
     window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [targetId])
 
   return (
     <AnimatePresence>
-      {scrollPosition > visibleScrollPosition && (
+      {visible && (
         <motion.h2
           className={style.miniHeader}
           initial={{ y: '-100%' }}
