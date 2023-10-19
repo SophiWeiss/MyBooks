@@ -28,13 +28,12 @@ export default async function Chapter({ params }) {
 
   return (
     <main className={commonStyle.main}>
-      <MiniHeader
-        book={bookTitle}
-        chapter={chapterTitle}
-        visibleScrollPosition={320}
-      />
+      <MiniHeader book={bookTitle} chapter={chapterTitle} targetId={'title'} />
       <article className={articleStyle.article}>
-        <Markdown>{`# ${bookTitle}\n## ${chapterTitle}\n${content}`}</Markdown>
+        <div id={'title'}>
+          <Markdown>{`# ${bookTitle}\n## ${chapterTitle}\n`}</Markdown>
+        </div>
+        <Markdown>{content}</Markdown>
       </article>
     </main>
   )
