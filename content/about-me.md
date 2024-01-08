@@ -19,6 +19,4 @@ Sophi Weiss (*Вайс, не Вейс, будь ласка*).
 
 Зв'язатися зі мною можна таким чином:
 
-[Telegram](https://t.me/sophi_mania)
-
-[Instagram](https://www.instagram.com/__sophi_mania__/)
+[Email](mailto://sophi.weiss34@gmail.com)
