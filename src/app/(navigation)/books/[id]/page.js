@@ -1,6 +1,6 @@
 import style from './page.module.css'
 import commonStyle from '@/css/common.module.css'
-import { getBookContent, getBookData } from '@/lib/books'
+import { getBookContent, getBookData, getBookReadingTime } from '@/lib/books'
 import Separator from '@/components/Separator'
 import Markdown from '@/components/Markdown'
 import Link from 'next/link'
@@ -9,6 +9,7 @@ export default async function Book({ params }) {
   const { id } = params
   const data = await getBookData(id)
   const chapters = await getBookContent(id)
+  const readTime = await getBookReadingTime(chapters)
   return (
     <main className={style.book}>
       <h1 className={commonStyle.title}>{data.title}</h1>
@@ -23,8 +24,8 @@ export default async function Book({ params }) {
         </p>
         <Separator vertical />
         <p>
-          <span className={style.propertyLabel}>Read Time:</span> not yet
-          implemented
+          <span className={style.propertyLabel}>Read Time:</span>{' '}
+          {readTime} minutes
         </p>
       </div>
       <Markdown className={style.description}>{data.content}</Markdown>
